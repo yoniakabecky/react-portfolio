@@ -1,0 +1,32 @@
+@import '../scss/variable';
+
+.contents {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+}
+
+.social_icon {
+  font-size: 3rem; 
+  margin: 2rem 1rem;
+  color: white;
+  opacity: 0.5;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 1;
+    transition: all 500ms; 
+  }
+}
+
+.linkedIn:hover {
+  color: $linkedIn;
+}
+
+.instagram:hover {
+  color: $instagram;
+}
+
+.envelope:hover {
+  color: #D44638;
+}
+

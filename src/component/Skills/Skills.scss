@@ -1,0 +1,287 @@
+@import '../scss/variable';
+
+/** variable */
+$list-items: 5;
+
+
+/** contents */
+#webSkills,
+#otherSkills {
+  margin-top: 5rem;
+}
+
+
+/** skills list */
+%circle {
+  background: #999;
+  color: #333;
+  border-radius: 100%;
+  width: 5rem;
+  height: 5rem;
+  position: absolute;
+  text-align: center;
+  line-height: 5rem;
+  transform: translate3d(0, 0, 0);
+  transition: transform ease-out 200ms;
+}
+
+@mixin hoverAction {
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
+  transition-duration: 200ms;
+  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
+}
+
+.skillOpen {
+  display: none;
+}
+
+.skills {
+  // width: 80%;
+  height: 5rem;
+  box-sizing: border-box;
+  font-size: 2rem;
+  position: relative;
+}
+
+.list-item {
+  @extend %circle;
+
+  &:hover {
+    background: white;
+    transition: all 2s;
+  }
+
+  @for $i from 1 through $list-items {
+    &:nth-child(#{$i + 2}) {
+      transition-duration: 180ms;
+    }
+  }
+}
+
+.skillOpenBtn {
+  @extend %circle;
+  @include hoverAction;
+  z-index: 2;
+}
+
+.skillOpenBtn:hover {
+  background: white;
+  color: $tomato;
+  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
+}
+
+.skillOpen:checked+.skillOpenBtn {
+  transition-timing-function: linear;
+  transition-duration: 200ms;
+  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
+}
+
+.skillOpen:checked~.list-item {
+  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
+  @for $i from 1 through $list-items{
+    &:nth-child(#{$i + 2}) {
+      transition-duration: 90ms + (100ms * $i);
+      transform: translate3d(110px * $i, 0, 0);
+    }
+  }
+}
+
+.html {
+  &:hover {
+    color: $html;
+  }
+}
+
+.css {
+  &:hover{
+    color: $css;
+  }
+}
+
+.sass {
+  &:hover{
+    color: $sass;
+  }
+}
+
+.js {
+  &:hover {
+    color: $js;
+  }
+}
+
+.react {
+  &:hover {
+    color: $react;
+  }
+}
+
+.git {
+  &:hover {
+    color: $git;
+  }
+}
+
+.illustrator {
+  &:hover {
+    color: $illustrator;
+  }
+}
+
+.firebase {
+  &:hover {
+    color: $firebase;
+  }
+}
+
+.nodejs {
+  &:hover {
+    // color: $nodejs
+    background-color: #999;
+  }
+}
+
+.solving {
+  &:hover {
+    color: $solving
+  }
+}
+
+
+/** tooltip */
+.tooltip {
+  display: inline-block;
+}
+
+.tooltipText {
+  line-height: 2rem;
+  font-size: 1rem;
+}
+
+.tooltip .tooltipText {
+  visibility: hidden;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+  line-height: 1rem;
+  position: absolute;
+  z-index: 1;
+  top: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.tooltip .tooltipText::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 0;
+  border: 0.5rem solid transparent;
+  border-bottom: 0.5rem solid black;
+  transform: translate(-50%, -100%);
+}
+
+.tooltip:hover .tooltipText {
+  visibility: visible;
+}
+
+#html {
+  background-color: $html;
+  &::after {
+    border-bottom: 0.5rem solid $html;
+  }
+}
+
+#css {
+  background-color: $css;
+  &::after {
+    border-bottom: 0.5rem solid $css;
+  }
+}
+
+#sass {
+  background-color: $sass;
+  &::after {
+    border-bottom: 0.5rem solid $sass;
+  }
+}
+
+#js {
+  background-color: $js;
+  color: $dark;
+  &::after {
+    border-bottom: 0.5rem solid $js;
+  }
+}
+
+#react {
+  background-color: $react;
+  color: $dark;
+  &::after {
+    border-bottom: 0.5rem solid $react;
+  }
+}
+
+#git {
+  background-color: $git;
+  &::after {
+    border-bottom: 0.5rem solid $git;
+  }
+}
+
+#illustrator {
+  background-color: $illustrator;
+  color: $dark;
+  &::after {
+    border-bottom: 0.5rem solid $illustrator;
+  }
+}
+
+#firebase {
+  background-color: $firebase;
+  color: $dark;
+  &::after {
+    border-bottom: 0.5rem solid $firebase;
+  }
+}
+
+#solving {
+  background-color: $solving;
+  color: $dark;
+  &::after {
+    border-bottom: 0.5rem solid $solving;
+  }
+}
+
+#nodejs {
+  // background-color: $nodejs;
+  color: #999;
+  &::after {
+    // border-bottom: 0.5rem solid $nodejs;
+  }
+}
+
+
+/** github link */
+.github-link {
+  bottom: 8rem;
+  box-sizing: border-box;
+  margin-right: 2rem;
+}
+
+.github {
+  @extend %circle;
+
+  background-color: transparent;
+  color: #999;
+  line-height: 5rem;
+  font-size: 5rem;
+
+  &:hover {
+    @include hoverAction;
+    color: $github;
+  }
+}
+

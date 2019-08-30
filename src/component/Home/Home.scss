@@ -1,0 +1,42 @@
+@import '../scss/variable';
+
+.name_wrapper {
+  text-align: right;
+  bottom: 5rem;
+}
+
+#myName {
+  font-size: 8rem; 
+  line-height: 6rem;
+  margin-bottom: 0;
+  cursor: pointer;
+}
+
+.link-wrapper {
+  text-decoration: none;
+  list-style-type: none;
+  top: 8rem;
+}
+
+.links {
+  color: $light;
+  font-size: 1.3rem;
+  text-decoration: none;
+  transition: all 800ms ease;
+
+  &::after {
+    content: ' ';
+    height: 1px;
+    width: 0%;
+    background-color: $tomato;
+    display: block;
+  }
+
+	&:hover {
+    color: $tomato;
+    &::after {
+      width: 100%;
+      transition: width 500ms ease;
+    }
+	}
+}

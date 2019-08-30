@@ -1,0 +1,80 @@
+@import '../scss/variable';
+
+/** colors */
+.red {
+	color: $tomato;
+}
+
+.bg-gray {
+	background-color: #444;
+}
+
+
+/** body wrapper */
+.container {
+  width: 100vw;
+	height: calc(100vh - #{$modalNavHeight});
+	display: flex;
+	flex-direction: column;
+	max-width: 90rem;
+	margin: 0 auto;
+	position: relative; 
+}
+
+.alignItemCenter {
+	align-items: center;
+}
+
+.justifyCenter{
+	justify-content: center;
+}
+
+.contents {
+	text-align: center;
+}
+
+.left {
+	position: absolute;
+  left: 8rem;
+}
+
+.right {
+	position: absolute;
+	right: 8rem;
+}
+
+
+/** page switch animation */
+.slideIn-appear,
+.slideIn-enter {
+	transform: translateY(100%);
+	z-index: 1;
+}
+
+.slideIn-appear-active,
+.slideIn-enter.slideIn-enter-active {
+	transform: translateY(0);
+	transition: transform 500ms ease-out;
+}
+
+.slideIn-exit.slideIn-exit-active {
+	transform: translateY(100%);
+  transition: opacity 300ms ease-out;
+}
+
+.fadeIn-appear,
+.fadeIn-enter {
+	opacity: 0;
+  z-index: 1;
+}
+
+.fadeIn-appear-active,
+.fadeIn-enter.fadeIn-enter-active {
+	opacity: 1;
+  transition: opacity 500ms ease-out;
+}
+
+.fadeIn-exit.fadeIn-exit-active {
+	opacity: 0;
+  transition: opacity 300ms ease-in;
+}

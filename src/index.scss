@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Quantico|Share+Tech+Mono|Ravi+Prakash&display=swap');
+
+* {
+  box-sizing: border-box;
+  font-family: 'Quantico', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #222;
+  color: #eee;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+
+.font_accent {
+  font-family: 'Ravi Prakash', cursive;
+}
+
+.font_simple {
+  font-family: 'Share Tech Mono', monospace;
+}
+
+h1 {
+  font-size: 7rem;
+  margin-bottom: 4.6rem;
+}
+
+h2 {
+  font-size: 4.2rem;
+  margin-bottom: 3.8rem;
+}
+
+h3 {
+  font-size: 3.4rem;
+  margin-bottom: 3rem;
+}
+
+h4 {
+  font-size: 3rem;
+  margin-bottom: 2.7rem;
+}
+
+h5 {
+  font-size: 2.2rem;
+  margin-bottom: 2rem;
+}
+
+h6 {
+  font-size: 1.8rem;
+  margin-bottom: 1.6rem;
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}

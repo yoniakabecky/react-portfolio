@@ -1,0 +1,38 @@
+@import '../scss/variable';
+
+.modal_nav {
+	height: $modalNavHeight;
+	width: 95%;
+	margin: 0 auto;
+	position: relative;
+	
+	.logo {
+		float: left;
+		height: 3rem;
+		position: absolute;
+		top: 50%;
+		margin-top: -1.5rem;
+	}
+
+	.close_link{
+		color: $light;
+		float: right;
+		font-size: 1.3rem;
+		line-height: 4rem;
+		padding-right: 1rem;
+		vertical-align: middle;
+		text-decoration: none;
+		transition: all 800ms;	
+		cursor: pointer;
+		
+		&:hover {
+			color: $tomato;
+		}
+	}		
+}
+
+.close_icon {
+	vertical-align: middle;
+	margin-left: 0.3rem;
+	padding-bottom: 0.1rem;
+}
