@@ -13,10 +13,10 @@ function ModalHeader({ location }) {
   }
 
   return (
-    <div className="modal_nav">
-      <h6 className={pathName === "/skills" ? "logo red" : "logo"}>{getPageName()}</h6>
-      <Link to="/" className="close_link font_simple">
-        CLOSE<FontAwesomeIcon icon={faTimes} className="close_icon" />
+    <div className="modal-nav">
+      <h4 className={pathName === "/skills" ? "logo red" : "logo"}>{getPageName()}</h4>
+      <Link to="/" className="close-link font-simple">
+        CLOSE<FontAwesomeIcon icon={faTimes} className="close-icon" />
       </Link>
     </div>
   );

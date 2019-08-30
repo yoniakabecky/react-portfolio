@@ -1,21 +1,36 @@
 @import '../scss/variable';
 
-.intro-wrapper {
+.introWrapper {
+  top: 5rem;
   p {
     width: 45vw;
   }
 }
 
-.hobby-wrapper {
-  bottom: 2rem;
+.hobbyWrapper {
+  bottom: 5rem;
   text-align: right;
 }
 
-
 .icons {
-  font-size: 3rem; 
-  margin: 2rem 1rem;
-  opacity: 1;
+  font-size: 5rem; 
+  margin: 2rem 2rem 0 0;
 }
 
 
+/** responsive */
+@media screen and (max-width: 640px) {
+  .introWrapper {
+    text-align: center;
+    margin-bottom: 7rem;
+    p {
+      width: 80vw;
+    }
+  }
+  .hobbyWrapper {
+    text-align: center;
+  }
+  .icons {
+    font-size: 6rem; 
+  }
+}

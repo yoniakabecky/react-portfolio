@@ -10,14 +10,22 @@
 }
 
 
+/** spacing */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+
 /** body wrapper */
 .container {
   width: 100vw;
 	height: calc(100vh - #{$modalNavHeight});
+	min-height: 30rem;
 	display: flex;
 	flex-direction: column;
-	max-width: 90rem;
+	max-width: 110rem;
 	margin: 0 auto;
+	padding: 0 3rem;
 	position: relative; 
 }
 
@@ -29,18 +37,18 @@
 	justify-content: center;
 }
 
-.contents {
+.textAlignCenter {
 	text-align: center;
 }
 
 .left {
 	position: absolute;
-  left: 8rem;
+  left: 5rem;
 }
 
 .right {
 	position: absolute;
-	right: 8rem;
+	right: 5rem;
 }
 
 

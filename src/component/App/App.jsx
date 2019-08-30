@@ -22,7 +22,6 @@ function App({ location }) {
         </Switch>
       </CSSTransition>
     </TransitionGroup>
-
   );
 }
 

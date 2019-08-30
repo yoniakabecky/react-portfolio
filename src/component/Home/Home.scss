@@ -1,18 +1,18 @@
 @import '../scss/variable';
 
-.name_wrapper {
+.nameWrapper {
   text-align: right;
   bottom: 5rem;
 }
 
 #myName {
-  font-size: 8rem; 
-  line-height: 6rem;
+  font-size: 14rem; 
+  line-height: 5rem;
   margin-bottom: 0;
   cursor: pointer;
 }
 
-.link-wrapper {
+.linkWrapper {
   text-decoration: none;
   list-style-type: none;
   top: 8rem;
@@ -20,7 +20,7 @@
 
 .links {
   color: $light;
-  font-size: 1.3rem;
+  font-size: 2rem;
   text-decoration: none;
   transition: all 800ms ease;
 
@@ -39,4 +39,18 @@
       transition: width 500ms ease;
     }
 	}
+}
+
+
+/** responsive */
+@media screen and (max-width: 640px) {
+  #myPosition {
+    font-size: 4rem;
+  }
+  .linkWrapper {
+    margin-top: 8rem;
+  }
+  .links {
+    font-size: 2.5rem;
+  }
 }

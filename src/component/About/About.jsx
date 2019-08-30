@@ -1,28 +1,35 @@
 import React from 'react';
 import ModalNav from '../ModalNav/ModalNav';
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFutbol } from '@fortawesome/free-regular-svg-icons';
 import { faCanadianMapleLeaf } from '@fortawesome/free-brands-svg-icons';
 import { faFilm, faBeer, faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { useMediaQuery } from 'react-responsive';
+import cx from "classnames";
 
 import './About.scss';
 
 function About() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 640px)'
+  });
+
   return (
     <div className="bg-gray">
       <ModalNav />
-      <div className="container">
-        <div className="left intro-wrapper">
-          <FontAwesomeIcon icon={faCanadianMapleLeaf} className="icons red" />
-          <h6>Hi, I'm <span className="red">Yoni</span> Aoki</h6>
+      <div className={cx("container", { justifyCenter: isMobile, alignItemCenter: isMobile })}>
+        <div className={cx({ left: !isMobile }, "introWrapper")}>
+          <h5>
+            <FontAwesomeIcon icon={faCanadianMapleLeaf} className="icons red" />
+            Hi, I'm Yoni Aoki
+          </h5>
           <p>
-            A Front-end Web Developer based in <strong>Vancouver</strong>, Canada.
-            Used to be an electronic engineer at a car parts manufacturer in Japan.
+            A Front-end Web Developer based in Vancouver, Canada.
+            Formerly worked as an electronic engineer at a car parts manufacturer in Japan.
             I'm passionate about improving my knowledge and skills, and learning new and innovative methods.
           </p>
         </div>
-        <div className="right hobby-wrapper">
+        <div className={cx({ right: !isMobile }, "hobbyWrapper")}>
           <p>
             Also I like these things.<br />
             Do we have interests in common?

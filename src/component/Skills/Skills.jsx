@@ -1,5 +1,8 @@
 import React from 'react';
 import ModalNav from '../ModalNav/ModalNav';
+import { useMediaQuery } from 'react-responsive';
+import cx from "classnames";
+
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHtml5, faCss3, faSass, faJs, faReact, faGitAlt, faNodeJs, faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -8,13 +11,17 @@ import { faCode, faLaptop, faPuzzlePiece } from '@fortawesome/free-solid-svg-ico
 import './Skills.scss';
 
 function Skills() {
+  const isMobile = useMediaQuery({
+    query: '(max-width: 640px)'
+  });
+
   return (
     <div>
       <ModalNav />
-      <div className="container">
-        <div className="left">
-          <div id="webSkills" >
-            <h6>Web Development</h6>
+      <div className={cx("container", { alignItemCenter: isMobile })}>
+        <div className={cx({ left: !isMobile })}>
+          <div id="webSkills">
+            <h5>Web Development</h5>
             <div className="skills">
               <input type="checkbox" href="#" className="skillOpen" name="webSkillOpen" id="webSkillOpen" />
               <label className="skillOpenBtn tooltip" htmlFor="webSkillOpen">
@@ -28,7 +35,7 @@ function Skills() {
             </div>
           </div>
           <div id="otherSkills">
-            <h6>Other</h6>
+            <h5>Other</h5>
             <div className="skills">
               <input type="checkbox" href="#" className="skillOpen" name="otherSkillOpen" id="otherSkillOpen" />
               <label className="skillOpenBtn" htmlFor="otherSkillOpen">
@@ -42,7 +49,7 @@ function Skills() {
             </div>
           </div>
         </div>
-        <div className="right github-link">
+        <div className="right githubLink">
           <a href="https://github.com/yoniakabecky" rel="noopener noreferrer" target="_blank" className="github">
             <FontAwesomeIcon icon={faGithub} />
           </a>

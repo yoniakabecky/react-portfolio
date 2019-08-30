@@ -3,14 +3,16 @@
 * {
   box-sizing: border-box;
   font-family: 'Quantico', sans-serif;
+  font-size: 62.5%;
 	margin: 0;
-	padding: 0;
+  padding: 0; 
 }
 
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #222;
+  font-size: 2rem;
   color: #eee;
 }
 
@@ -19,45 +21,52 @@ code {
 }
 
 
-.font_accent {
+.font-accent {
   font-family: 'Ravi Prakash', cursive;
 }
 
-.font_simple {
+.font-simple {
   font-family: 'Share Tech Mono', monospace;
 }
 
 h1 {
-  font-size: 7rem;
-  margin-bottom: 4.6rem;
+  font-size: 6rem;
+  margin-bottom: 5rem;
 }
 
 h2 {
-  font-size: 4.2rem;
-  margin-bottom: 3.8rem;
+  font-size: 5.5rem;
+  margin-bottom: 4.8rem;
 }
 
 h3 {
-  font-size: 3.4rem;
-  margin-bottom: 3rem;
+  font-size: 4.5rem;
+  margin-bottom: 4rem;
 }
 
 h4 {
-  font-size: 3rem;
-  margin-bottom: 2.7rem;
+  font-size: 3.5rem;
+  margin-bottom: 3rem;
 }
 
 h5 {
-  font-size: 2.2rem;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  margin-bottom: 2.3rem;
 }
 
 h6 {
-  font-size: 1.8rem;
-  margin-bottom: 1.6rem;
+  font-size: 2.4rem;
+  margin-bottom: 1.9rem;
 }
 
 p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
+  font-size: 2.0rem;
+  margin-bottom: 1.5rem;
+}
+
+/** responsive */
+@media screen and (max-width: 640px) {
+  * {
+    font-size: calc(100vw / 45);
+  }
 }

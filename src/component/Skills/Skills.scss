@@ -16,11 +16,11 @@ $list-items: 5;
   background: #999;
   color: #333;
   border-radius: 100%;
-  width: 5rem;
-  height: 5rem;
+  width: 7rem;
+  height: 7rem;
   position: absolute;
   text-align: center;
-  line-height: 5rem;
+  line-height: 7rem;
   transform: translate3d(0, 0, 0);
   transition: transform ease-out 200ms;
 }
@@ -36,10 +36,9 @@ $list-items: 5;
 }
 
 .skills {
-  // width: 80%;
-  height: 5rem;
+  height: 7rem;
   box-sizing: border-box;
-  font-size: 2rem;
+  font-size: 4.5rem;
   position: relative;
 }
 
@@ -81,7 +80,7 @@ $list-items: 5;
   @for $i from 1 through $list-items{
     &:nth-child(#{$i + 2}) {
       transition-duration: 90ms + (100ms * $i);
-      transform: translate3d(110px * $i, 0, 0);
+      transform: translate3d(12rem * $i, 0, 0);
     }
   }
 }
@@ -154,8 +153,8 @@ $list-items: 5;
 }
 
 .tooltipText {
-  line-height: 2rem;
-  font-size: 1rem;
+  line-height: 4rem;
+  font-size: 1.5rem;
 }
 
 .tooltip .tooltipText {
@@ -163,9 +162,9 @@ $list-items: 5;
   background-color: black;
   color: #fff;
   text-align: center;
-  border-radius: 0.3rem;
-  padding: 0.5rem;
-  line-height: 1rem;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  line-height: 1.5rem;
   position: absolute;
   z-index: 1;
   top: 120%;
@@ -178,8 +177,8 @@ $list-items: 5;
   position: absolute;
   left: 50%;
   top: 0;
-  border: 0.5rem solid transparent;
-  border-bottom: 0.5rem solid black;
+  border: 0.8rem solid transparent;
+  border-bottom: 0.8rem solid black;
   transform: translate(-50%, -100%);
 }
 
@@ -190,7 +189,7 @@ $list-items: 5;
 #html {
   background-color: $html;
   &::after {
-    border-bottom: 0.5rem solid $html;
+    border-bottom: 0.8rem solid $html;
   }
 }
 
@@ -204,7 +203,7 @@ $list-items: 5;
 #sass {
   background-color: $sass;
   &::after {
-    border-bottom: 0.5rem solid $sass;
+    border-bottom: 0.8rem solid $sass;
   }
 }
 
@@ -212,7 +211,7 @@ $list-items: 5;
   background-color: $js;
   color: $dark;
   &::after {
-    border-bottom: 0.5rem solid $js;
+    border-bottom: 0.8rem solid $js;
   }
 }
 
@@ -220,14 +219,14 @@ $list-items: 5;
   background-color: $react;
   color: $dark;
   &::after {
-    border-bottom: 0.5rem solid $react;
+    border-bottom: 0.8rem solid $react;
   }
 }
 
 #git {
   background-color: $git;
   &::after {
-    border-bottom: 0.5rem solid $git;
+    border-bottom: 0.8rem solid $git;
   }
 }
 
@@ -235,7 +234,7 @@ $list-items: 5;
   background-color: $illustrator;
   color: $dark;
   &::after {
-    border-bottom: 0.5rem solid $illustrator;
+    border-bottom: 0.8rem solid $illustrator;
   }
 }
 
@@ -243,7 +242,7 @@ $list-items: 5;
   background-color: $firebase;
   color: $dark;
   &::after {
-    border-bottom: 0.5rem solid $firebase;
+    border-bottom: 0.8rem solid $firebase;
   }
 }
 
@@ -251,7 +250,7 @@ $list-items: 5;
   background-color: $solving;
   color: $dark;
   &::after {
-    border-bottom: 0.5rem solid $solving;
+    border-bottom: 0.8rem solid $solving;
   }
 }
 
@@ -259,29 +258,62 @@ $list-items: 5;
   // background-color: $nodejs;
   color: #999;
   &::after {
-    // border-bottom: 0.5rem solid $nodejs;
+    // border-bottom: 0.8rem solid $nodejs;
   }
 }
 
 
 /** github link */
-.github-link {
-  bottom: 8rem;
-  box-sizing: border-box;
-  margin-right: 2rem;
+.githubLink {
+  bottom: 5rem;
 }
 
 .github {
-  @extend %circle;
-
-  background-color: transparent;
+  background: transparent;
   color: #999;
-  line-height: 5rem;
-  font-size: 5rem;
-
+  font-size: 7rem;
+  border-radius: 100%;
+  width: 7rem;
+  height: 7rem;
+  line-height: 7rem;
+  
   &:hover {
     @include hoverAction;
     color: $github;
   }
 }
+
+
+/** responsive */
+@media screen and (max-width: 640px) {
+  %circle {
+    width: 5rem;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+  }
+  #webSkills,
+  #otherSkills {
+    text-align: center;
+  }
+  .skills {
+    font-size: 10rem;
+    height: 10rem;
+    transform: translateX(-2.5rem);
+  }
+  .list-item {
+    margin-top: 7rem;
+    left: 5vw;
+    opacity: 0;
+  }
+  .skillOpen:checked~.list-item {
+    @for $i from 0 through $list-items{
+      &:nth-child(#{$i + 3}) {
+        transform: translate3d(6rem * $i, 0, 0);
+      }
+    }
+    opacity: 1;
+  }
+}
+
 
