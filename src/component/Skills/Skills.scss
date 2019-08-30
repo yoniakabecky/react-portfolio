@@ -189,21 +189,21 @@ $list-items: 5;
 #html {
   background-color: $html;
   &::after {
-    border-bottom: 0.8rem solid $html;
+    border-bottom-color: $html;
   }
 }
 
 #css {
   background-color: $css;
   &::after {
-    border-bottom: 0.5rem solid $css;
+    border-bottom-color: $css;
   }
 }
 
 #sass {
   background-color: $sass;
   &::after {
-    border-bottom: 0.8rem solid $sass;
+    border-bottom-color: $sass;
   }
 }
 
@@ -211,7 +211,7 @@ $list-items: 5;
   background-color: $js;
   color: $dark;
   &::after {
-    border-bottom: 0.8rem solid $js;
+    border-bottom-color: $js;
   }
 }
 
@@ -219,14 +219,14 @@ $list-items: 5;
   background-color: $react;
   color: $dark;
   &::after {
-    border-bottom: 0.8rem solid $react;
+    border-bottom-color: $react;
   }
 }
 
 #git {
   background-color: $git;
   &::after {
-    border-bottom: 0.8rem solid $git;
+    border-bottom-color: $git;
   }
 }
 
@@ -234,7 +234,7 @@ $list-items: 5;
   background-color: $illustrator;
   color: $dark;
   &::after {
-    border-bottom: 0.8rem solid $illustrator;
+    border-bottom-color: $illustrator;
   }
 }
 
@@ -242,7 +242,7 @@ $list-items: 5;
   background-color: $firebase;
   color: $dark;
   &::after {
-    border-bottom: 0.8rem solid $firebase;
+    border-bottom-color: $firebase;
   }
 }
 
@@ -250,7 +250,7 @@ $list-items: 5;
   background-color: $solving;
   color: $dark;
   &::after {
-    border-bottom: 0.8rem solid $solving;
+    border-bottom-color: $solving;
   }
 }
 
@@ -258,7 +258,7 @@ $list-items: 5;
   // background-color: $nodejs;
   color: #999;
   &::after {
-    // border-bottom: 0.8rem solid $nodejs;
+    // border-bottom-color: $nodejs;
   }
 }
 
