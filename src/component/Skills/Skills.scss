@@ -135,8 +135,7 @@ $list-items: 5;
 
 .nodejs {
   &:hover {
-    // color: $nodejs
-    background-color: #999;
+    color: $nodejs
   }
 }
 
@@ -255,10 +254,9 @@ $list-items: 5;
 }
 
 #nodejs {
-  // background-color: $nodejs;
-  color: #999;
+  background-color: $nodejs;
   &::after {
-    // border-bottom-color: $nodejs;
+    border-bottom-color: $nodejs;
   }
 }
 
