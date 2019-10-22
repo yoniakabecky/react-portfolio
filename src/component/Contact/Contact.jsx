@@ -16,9 +16,10 @@ class Contact extends React.Component {
           <h1 className="red">{greeting()}</h1>
           <h4 className="textAlignCenter">
             Would you like to contact me?<br />
-            Please reach me on ⬇
+            Please reach me on <br />
+            ⬇
           </h4>
-          <div className="mt-2">
+          <div>
             <a href="https://www.linkedin.com/in/yoniakabecky/" rel="noopener noreferrer" target="_blank" className="social-icon linkedIn">
               <FontAwesomeIcon icon={faLinkedinIn} />
             </a>
