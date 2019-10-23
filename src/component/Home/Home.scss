@@ -54,3 +54,24 @@
     font-size: 2.5rem;
   }
 }
+
+
+/** react motion */
+$colors: '#69D2E7', '#A7DBD8', '#E0E4CC', '#F38630', '#FA6900', '#FF4E50', '#F9D423';
+$key: random( length($colors) );
+$nth: nth( $colors, $key );
+
+.reactMotion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.reactMotionBall {
+  width: 50px;
+  height: 50px;
+  border-radius: 99px;
+  position: absolute;
+  border: 1px solid $tomato;
+
+}
