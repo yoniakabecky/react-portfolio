@@ -11,7 +11,7 @@ class Contact extends React.Component {
   render() {
     return (
       <div className="bg-gray">
-        <ModalNav />
+        <ModalNav isBgGray={true} />
         <div className="container alignItemCenter justifyCenter textAlignCenter">
           <h1 className="red">{greeting()}</h1>
           <h4 className="textAlignCenter">

@@ -1,21 +1,24 @@
 import React from 'react';
-import { withRouter } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
+import cx from "classnames";
 
 import './ModalNav.scss';
+import * as ROUTES from '../../constants/routes';
 
-function ModalHeader({ location }) {
+function ModalHeader({ location, isBgGray }) {
   const pathName = location.pathname;
   const getPageName = () => {
     return pathName.replace('/', '');
   }
 
+  const bgColor = isBgGray ? "bg-gray" : "bg-dark";
+
   return (
-    <div className="modal-nav">
+    <div className={cx("modal-nav", bgColor)}>
       <h4 className={pathName === "/skills" ? "logo red" : "logo"}>{getPageName()}</h4>
-      <Link to="/" className="close-link font-simple">
+      <Link to={ROUTES.HOME} className="close-link font-simple">
         CLOSE<FontAwesomeIcon icon={faTimes} className="close-icon" />
       </Link>
     </div>

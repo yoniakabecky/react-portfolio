@@ -16,7 +16,7 @@ function About() {
 
   return (
     <div className="bg-gray">
-      <ModalNav />
+      <ModalNav isBgGray={true} />
       <div className={cx("container", { justifyCenter: isMobile, alignItemCenter: isMobile })}>
         <div className={cx({ left: !isMobile }, "introWrapper")}>
           <h5>

@@ -5,6 +5,7 @@ import cx from "classnames";
 import { TransitionMotion, spring } from 'react-motion';
 
 import './Home.scss';
+import * as ROUTES from '../../constants/routes';
 
 const leavingSpringConfig = { stiffness: 60, damping: 15 };
 
@@ -22,13 +23,13 @@ function Home() {
         </div>
         <ul className={cx("linkWrapper", { right: !isMobile })}>
           <li>
-            <Link to="/about" className="links">Who I Am?</Link>
+            <Link to={ROUTES.ABOUT} className="links">Who I Am?</Link>
           </li>
           <li>
-            <Link to="/skills" className="links">What I Do?</Link>
+            <Link to={ROUTES.SKILLS} className="links">What I Do?</Link>
           </li>
           <li>
-            <Link to="/contact" className="links">Wanna Chat?</Link>
+            <Link to={ROUTES.CONTACT} className="links">Wanna Chat?</Link>
           </li>
         </ul>
       </div>
