@@ -37,7 +37,7 @@ const mySkills = [
 ];
 
 const myProjects = [
-  { title: "21", img: "game21Img", linkTo: ROUTES.BJ },
+  // { title: "21", img: "game21Img", linkTo: ROUTES.BJ },
   { title: "Scheduler", img: "schedulerImg", linkTo: ROUTES.SCHEDULER },
   { title: "Portfolio", img: "jsPortfolioImg", linkTo: ROUTES.PORTFOLIO },
   { title: "Assignment", img: "", linkTo: ROUTES.ASSIGNMENT },
@@ -68,8 +68,16 @@ function Skills() {
 
         <div id="myWorks" className="mb-5">
           <h5>My Works</h5>
-          <p></p>
           <div className="projects">
+            <a href="https://yoniakabecky.github.io/blackjack-js/" rel="noopener noreferrer" target="_blank">
+              <div className="projectItems" style={{ cursor: "pointer" }}>
+                <div className="projectImages" id="game21Img"></div>
+                <div className="projectDescription">
+                  <h6>21</h6>
+                  <p>Jump to Site</p>
+                </div>
+              </div>
+            </a>
             {myProjects.map((project, index) => (
               // <Link to={project.linkTo} key={index}>
               <div className="projectItems" key={index}>
@@ -85,6 +93,7 @@ function Skills() {
                 <div className="projectImages" id="octcatImg"></div>
                 <div className="projectDescription">
                   <h6>My Github</h6>
+                  <p>Jump to Github</p>
                 </div>
               </div>
             </a>
