@@ -1,0 +1,9 @@
+export const HOME = '/';
+export const ABOUT = '/about';
+export const SKILLS = '/skills';
+export const CONTACT = '/contact';
+export const BJ = '/project/21';
+export const SCHEDULER = '/project/scheduler';
+export const PORTFOLIO = '/project/portfolio';
+export const ASSIGNMENT = '/project/assignment';
+export const VECTOR = '/project/vector';

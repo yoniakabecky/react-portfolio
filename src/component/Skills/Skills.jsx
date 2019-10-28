@@ -2,13 +2,48 @@ import React from 'react';
 import ModalNav from '../ModalNav/ModalNav';
 import { useMediaQuery } from 'react-responsive';
 import cx from "classnames";
-
-
+// import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHtml5, faCss3, faSass, faJs, faReact, faGitAlt, faNodeJs, faGithub } from '@fortawesome/free-brands-svg-icons';
-import { faCode, faLaptop, faPuzzlePiece } from '@fortawesome/free-solid-svg-icons';
+import {
+  faHtml5, faCss3, faSass, faJs, faReact,
+  faGitAlt, faNodeJs, faFigma,
+} from '@fortawesome/free-brands-svg-icons';
+import { faPuzzlePiece, faMobileAlt, faSmile, faUtensils } from '@fortawesome/free-solid-svg-icons';
+
+import { ReactComponent as ReduxIcon } from '../../resources/icons/redux.svg';
+import { ReactComponent as FirebaseIcon } from '../../resources/icons/firebase.svg';
+import { ReactComponent as MuiIcon } from '../../resources/icons/mui.svg';
 
 import './Skills.scss';
+
+const mySkills = [
+  { name: "HTML5", wrapper: "html", icon: <FontAwesomeIcon icon={faHtml5} />, tooltipId: "html" },
+  { name: "CSS3", wrapper: "css", icon: <FontAwesomeIcon icon={faCss3} />, tooltipId: "css" },
+  { name: "Sass", wrapper: "sass", icon: <FontAwesomeIcon icon={faSass} />, tooltipId: "sass" },
+  { name: "JavaScript", wrapper: "js", icon: <FontAwesomeIcon icon={faJs} />, tooltipId: "js" },
+  { name: "ReactJS", wrapper: "react", icon: <FontAwesomeIcon icon={faReact} />, tooltipId: "react" },
+  { name: "Redux", wrapper: "redux", icon: <ReduxIcon id="reduxIcon" className="svgIcon" />, tooltipId: "redux" },
+  { name: "Material-ui", wrapper: "mui", icon: <MuiIcon id="muiIcon" className="svgIcon" />, tooltipId: "mui" },
+  { name: "Responsive Design", wrapper: "responsive", icon: <FontAwesomeIcon icon={faMobileAlt} />, tooltipId: "responsive" },
+  { name: "Git", wrapper: "git", icon: <FontAwesomeIcon icon={faGitAlt} />, tooltipId: "git" },
+  { name: "Firebase", wrapper: "firebase", icon: <FirebaseIcon id="firebaseIcon" className="svgIcon" />, tooltipId: "firebase" },
+  { name: "NodeJS", wrapper: "nodejs", icon: <FontAwesomeIcon icon={faNodeJs} />, tooltipId: "nodejs" },
+  { name: "Problem Solving", wrapper: "solving", icon: <FontAwesomeIcon icon={faPuzzlePiece} />, tooltipId: "solving" },
+  { name: "Illustrator", wrapper: "illustrator", icon: "Ai", tooltipId: "illustrator" },
+  { name: "Figma", wrapper: "figma", icon: <FontAwesomeIcon icon={faFigma} />, tooltipId: "figma" },
+  { name: "Hospitality", wrapper: "hospitality", icon: <FontAwesomeIcon icon={faUtensils} />, tooltipId: "hospitality" },
+  { name: "human", wrapper: "", icon: <FontAwesomeIcon icon={faSmile} />, tooltipId: "" },
+];
+
+const myProjects = [
+  { title: "21", img: "game21Img", linkTo: ROUTES.BJ },
+  { title: "Scheduler", img: "schedulerImg", linkTo: ROUTES.SCHEDULER },
+  { title: "Portfolio", img: "jsPortfolioImg", linkTo: ROUTES.PORTFOLIO },
+  { title: "Assignment", img: "", linkTo: ROUTES.ASSIGNMENT },
+  { title: "Vector", img: "", linkTo: ROUTES.VECTOR },
+];
+
 
 function Skills() {
   const isMobile = useMediaQuery({
@@ -17,46 +52,46 @@ function Skills() {
 
   return (
     <div>
-      <ModalNav />
+      <ModalNav isBgGray={false} />
       <div className={cx("container", { alignItemCenter: isMobile })}>
-        <div className={cx({ left: !isMobile })}>
-          <div id="webSkills">
-            <h5>Web Development</h5>
-            <div className="skills">
-              <input type="checkbox" href="#" className="skillOpen" name="webSkillOpen" id="webSkillOpen" />
-              <label className="skillOpenBtn tooltip" htmlFor="webSkillOpen">
-                <FontAwesomeIcon icon={faCode} />
-              </label>
-              <span className="list-item tooltip html "><FontAwesomeIcon icon={faHtml5} /><span className="tooltipText" id="html">HTML5</span></span>
-              <span className="list-item tooltip css"><FontAwesomeIcon icon={faCss3} /><span className="tooltipText" id="css">CSS3</span></span>
-              <span className="list-item tooltip sass"><FontAwesomeIcon icon={faSass} /><span className="tooltipText" id="sass">Sass</span></span>
-              <span className="list-item tooltip js"><FontAwesomeIcon icon={faJs} /><span className="tooltipText" id="js">JavaScript</span></span>
-              <span className="list-item tooltip react"><FontAwesomeIcon icon={faReact} /><span className="tooltipText" id="react">ReactJS</span></span>
-            </div>
-          </div>
-          <div id="otherSkills">
-            <h5>Other</h5>
-            <div className="skills">
-              <input type="checkbox" href="#" className="skillOpen" name="otherSkillOpen" id="otherSkillOpen" />
-              <label className="skillOpenBtn" htmlFor="otherSkillOpen">
-                <FontAwesomeIcon icon={faLaptop} />
-              </label>
-              <span className="list-item tooltip git"><FontAwesomeIcon icon={faGitAlt} /><span className="tooltipText" id="git">Git</span></span>
-              <span className="list-item tooltip firebase">FB<span className="tooltipText" id="firebase">Firebase</span></span>
-              <span className="list-item tooltip nodejs"><FontAwesomeIcon icon={faNodeJs} /><span className="tooltipText" id="nodejs">NodeJS (maybe)</span></span>
-              <span className="list-item tooltip illustrator">Ai<span className="tooltipText" id="illustrator">Illustrator</span></span>
-              <span className="list-item tooltip solving"><FontAwesomeIcon icon={faPuzzlePiece} /><span className="tooltipText" id="solving">Problem Solving</span></span>
-            </div>
+        <div id="mySkills">
+          <h5>My Skills</h5>
+          <div className="skills">
+            {mySkills.map((skill, index) => (
+              <span className={cx("skillItems tooltip", skill.wrapper)} key={index}>
+                {skill.icon}
+                <span className="tooltipText" id={skill.tooltipId}>{skill.name}</span>
+              </span>
+            ))}
           </div>
         </div>
-        <div className="right githubLink">
-          <a href="https://github.com/yoniakabecky" rel="noopener noreferrer" target="_blank" className="github">
-            <FontAwesomeIcon icon={faGithub} />
-          </a>
+
+        <div id="myWorks" className="mb-5">
+          <h5>My Works</h5>
+          <p></p>
+          <div className="projects">
+            {myProjects.map((project, index) => (
+              // <Link to={project.linkTo} key={index}>
+              <div className="projectItems" key={index}>
+                <div className="projectImages" id={project.img}></div>
+                <div className="projectDescription">
+                  <h6>{project.title}</h6>
+                </div>
+              </div>
+              // </Link>
+            ))}
+            <a href="https://github.com/yoniakabecky" rel="noopener noreferrer" target="_blank">
+              <div className="projectItems" style={{ cursor: "pointer" }}>
+                <div className="projectImages" id="octcatImg"></div>
+                <div className="projectDescription">
+                  <h6>My Github</h6>
+                </div>
+              </div>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-
   );
 }
 

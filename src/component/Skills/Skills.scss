@@ -1,13 +1,9 @@
 @import '../scss/variable';
 
-/** variable */
-$list-items: 5;
-
-
 /** contents */
-#webSkills,
-#otherSkills {
-  margin-top: 5rem;
+#mySkills,
+#myWorks {
+  margin-top: 8rem;
 }
 
 
@@ -16,19 +12,12 @@ $list-items: 5;
   background: #999;
   color: #333;
   border-radius: 100%;
-  width: 7rem;
-  height: 7rem;
-  position: absolute;
+  width: 10rem;
+  height: 10rem;
   text-align: center;
-  line-height: 7rem;
+  line-height: 10rem;
   transform: translate3d(0, 0, 0);
   transition: transform ease-out 200ms;
-}
-
-@mixin hoverAction {
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1.275);
-  transition-duration: 200ms;
-  transform: scale(1.1, 1.1) translate3d(0, 0, 0);
 }
 
 .skillOpen {
@@ -36,53 +25,33 @@ $list-items: 5;
 }
 
 .skills {
-  height: 7rem;
   box-sizing: border-box;
-  font-size: 4.5rem;
+  font-size: 6rem;
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.list-item {
+.skillItems {
   @extend %circle;
+
+  margin: 4rem 3rem;
 
   &:hover {
-    background: white;
-    transition: all 2s;
-  }
-
-  @for $i from 1 through $list-items {
-    &:nth-child(#{$i + 2}) {
-      transition-duration: 180ms;
-    }
+    background: $light;
+    transition: all 1s;
   }
 }
 
-.skillOpenBtn {
-  @extend %circle;
-  @include hoverAction;
-  z-index: 2;
+.svgIcon {
+  width: 5rem;
+  height: 100%;
+  fill: #333;
 }
 
-.skillOpenBtn:hover {
-  background: white;
-  color: $tomato;
-  transform: scale(1.2, 1.2) translate3d(0, 0, 0);
-}
-
-.skillOpen:checked+.skillOpenBtn {
-  transition-timing-function: linear;
-  transition-duration: 200ms;
-  transform: scale(0.8, 0.8) translate3d(0, 0, 0);
-}
-
-.skillOpen:checked~.list-item {
-  transition-timing-function: cubic-bezier(0.165, 0.840, 0.440, 1.000);
-  @for $i from 1 through $list-items{
-    &:nth-child(#{$i + 2}) {
-      transition-duration: 90ms + (100ms * $i);
-      transform: translate3d(12rem * $i, 0, 0);
-    }
-  }
+#muiIcon {
+  width: 4rem;
 }
 
 .html {
@@ -115,6 +84,15 @@ $list-items: 5;
   }
 }
 
+.redux {
+  &:hover {
+    #reduxIcon {
+      fill: $redux;
+      transition: all 1s;
+    }
+  }
+}
+
 .git {
   &:hover {
     color: $git;
@@ -129,7 +107,10 @@ $list-items: 5;
 
 .firebase {
   &:hover {
-    color: $firebase;
+    #firebaseIcon {
+      fill: $firebase;
+      transition: all 1s;
+    }
   }
 }
 
@@ -142,6 +123,33 @@ $list-items: 5;
 .solving {
   &:hover {
     color: $solving
+  }
+}
+
+.figma {
+  &:hover {
+    color: $figma
+  }
+}
+
+.responsive {
+  &:hover {
+    color: $responsive
+  }
+}
+
+.mui {
+  &:hover {
+    #muiIcon {
+      fill: $mui;
+      transition: all 1s;
+    }
+  }
+}
+
+.hospitality {
+  &:hover {
+    color: $hospitality
   }
 }
 
@@ -176,8 +184,7 @@ $list-items: 5;
   position: absolute;
   left: 50%;
   top: 0;
-  border: 0.8rem solid transparent;
-  border-bottom: 0.8rem solid black;
+  border: 1rem solid transparent;
   transform: translate(-50%, -100%);
 }
 
@@ -222,6 +229,13 @@ $list-items: 5;
   }
 }
 
+#redux {
+  background-color: $redux;
+  &::after {
+    border-bottom-color: $redux;
+  }
+}
+
 #git {
   background-color: $git;
   &::after {
@@ -260,24 +274,108 @@ $list-items: 5;
   }
 }
 
-
-/** github link */
-.githubLink {
-  bottom: 5rem;
+#figma {
+  background-color: $figma;
+  color: $dark;
+  &::after {
+    border-bottom-color: $figma;
+  }
 }
 
-.github {
-  background: transparent;
-  color: #999;
-  font-size: 7rem;
-  border-radius: 100%;
-  width: 7rem;
-  height: 7rem;
-  line-height: 7rem;
+#mui {
+  background-color: $mui;
+  color: $dark;
+  &::after {
+    border-bottom-color: $mui;
+  }
+}
+
+#responsive {
+  background-color: $responsive;
+  &::after {
+    border-bottom-color: $responsive;
+  }
+}
+
+#hospitality {
+  background-color: $hospitality;
+  &::after {
+    border-bottom-color: $hospitality;
+  }
+}
+
+
+/** project */
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.projectItems {
+  position: relative;
+  min-width: 30rem;
+  height: 20rem;
+  background-color: $tomato;
+  margin: 2.5rem 1rem;
+  // cursor: pointer;
+  cursor: not-allowed;
   
+  .projectImages {
+    width: 30rem;
+    height: 20rem;
+    background-image: url(../../resources//piggy.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $dark;
+    background-size: 20rem 20rem;
+  }
+
+  #game21Img {
+    background-image: $bjImage;
+    background-size: 30rem 20rem;
+  }
+
+  #schedulerImg {
+    background-image: $scheduleImage;
+    background-size: 30rem 20rem;
+  }
+
+  #jsPortfolioImg {
+    background-image: $portfolioImage;
+    background-size: 30rem 20rem;
+  }
+
+  #octcatImg {
+    background-image: $octcatImg;
+    background-size: 20rem 20rem;
+  }
+
+  .projectDescription{
+    text-align: center;
+    color: $light;
+    opacity: 0;
+    transition: .5s ease;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+
+    h6 {
+      border-bottom: .2rem solid;
+    }
+  }
+
   &:hover {
-    @include hoverAction;
-    color: $github;
+    img, .projectImages {
+      opacity: .5;
+      transition: all .5s;
+      filter: blur(.2rem);
+    }
+    .projectDescription {
+      opacity: 1;
+    }
   }
 }
 
@@ -285,32 +383,26 @@ $list-items: 5;
 /** responsive */
 @media screen and (max-width: 640px) {
   %circle {
-    width: 5rem;
-    height: 5rem;
-    line-height: 5rem;
-    font-size: 2.5rem;
+    width: 7rem;
+    height: 7rem;
+    line-height: 7rem;
+    font-size: 3rem;
   }
-  #webSkills,
-  #otherSkills {
+  #mySkills,
+  #myWorks {
     text-align: center;
   }
   .skills {
     font-size: 10rem;
-    height: 12rem;
-    transform: translateX(-2.5rem);
   }
-  .list-item {
+  .skillItems {
     margin-top: 7rem;
     left: 5vw;
-    opacity: 0;
   }
-  .skillOpen:checked~.list-item {
-    @for $i from 0 through $list-items{
-      &:nth-child(#{$i + 3}) {
-        transform: translate3d(6rem * $i, 0, 0);
-      }
-    }
-    opacity: 1;
+  .svgLogos {
+    width: 3rem;
+    height: 3rem;
+    height: 100%;
   }
 }
 

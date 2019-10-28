@@ -12,6 +12,9 @@ $css: #2965F1;
 $sass: #CD6799;
 $js: #F0Db4F;
 $react: #61DBFB;
+$redux: #764ABC;
+$mui: #00B0FF;
+$responsive: #a94db4;
 
 $git: #F1502F;
 $github: #A94BD4;
@@ -20,9 +23,16 @@ $firebase: #FFCD04;
 $nodejs: #68A063;
 $illustrator: #FF7C00;
 $solving: #49ee43;
+$figma: #0ACF83;
+$hospitality: #F38630;
+
 
 /** value */
 $modalNavHeight: 5rem;
 
-// #4c277a
-// #a94db4
+
+/** images */
+$portfolioImage: url(../../resources//projects/portfolio-topPage.png);
+$bjImage: url(../../resources/projects/bj-topPage.png);
+$scheduleImage: url(../../resources/projects/scheduler-topPage.png);
+$octcatImg: url(../../resources/projects/octcat.png);
