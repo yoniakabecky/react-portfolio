@@ -37,11 +37,11 @@ const mySkills = [
 ];
 
 const myProjects = [
-  // { title: "21", img: "game21Img", linkTo: ROUTES.BJ },
-  { title: "Scheduler", img: "schedulerImg", linkTo: ROUTES.SCHEDULER },
-  { title: "Portfolio", img: "jsPortfolioImg", linkTo: ROUTES.PORTFOLIO },
-  { title: "Assignment", img: "", linkTo: ROUTES.ASSIGNMENT },
-  { title: "Vector", img: "", linkTo: ROUTES.VECTOR },
+  // { title: "21", subTitle: "Black Jack", img: "game21Img", linkTo: ROUTES.BJ },
+  { title: "Scheduler", subTitle: "Shift Maker", img: "schedulerImg", linkTo: ROUTES.SCHEDULER },
+  // { title: "Portfolio", subTitle: "w/ JavaScript", img: "jsPortfolioImg", linkTo: ROUTES.PORTFOLIO },
+  { title: "Assignment", subTitle: "React & Redux", img: "", linkTo: ROUTES.ASSIGNMENT },
+  { title: "Vector", subTitle: "Design", img: "", linkTo: ROUTES.VECTOR },
 ];
 
 
@@ -68,13 +68,23 @@ function Skills() {
 
         <div id="myWorks" className="mb-5">
           <h5>My Works</h5>
+          <p>Click to Jump the sites</p>
           <div className="projects">
             <a href="https://yoniakabecky.github.io/blackjack-js/" rel="noopener noreferrer" target="_blank">
               <div className="projectItems" style={{ cursor: "pointer" }}>
                 <div className="projectImages" id="game21Img"></div>
                 <div className="projectDescription">
                   <h6>21</h6>
-                  <p>Jump to Site</p>
+                  <p>Black Jack</p>
+                </div>
+              </div>
+            </a>
+            <a href="https://yoniakabecky.github.io/javascript-portfolio/" rel="noopener noreferrer" target="_blank">
+              <div className="projectItems" style={{ cursor: "pointer" }}>
+                <div className="projectImages" id="jsPortfolioImg"></div>
+                <div className="projectDescription">
+                  <h6>Portfolio</h6>
+                  <p>w/ JavaScript</p>
                 </div>
               </div>
             </a>
@@ -84,6 +94,7 @@ function Skills() {
                 <div className="projectImages" id={project.img}></div>
                 <div className="projectDescription">
                   <h6>{project.title}</h6>
+                  <p>{project.subTitle}</p>
                 </div>
               </div>
               // </Link>
@@ -92,7 +103,7 @@ function Skills() {
               <div className="projectItems" style={{ cursor: "pointer" }}>
                 <div className="projectImages" id="octcatImg"></div>
                 <div className="projectDescription">
-                  <h6>My Github</h6>
+                  <h6>Github</h6>
                   <p>Jump to Github</p>
                 </div>
               </div>
@@ -100,7 +111,7 @@ function Skills() {
           </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 }
 
