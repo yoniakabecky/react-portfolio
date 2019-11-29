@@ -13,6 +13,9 @@
   background-color: $dark;
 }
 
+.bg-noColor {
+	background-color: transparent;
+}
 
 /** spacing */
 .mt-2 {
@@ -63,7 +66,6 @@
 /** page switch animation */
 .slideIn-enter {
 	transform: translateY(100%);
-	z-index: 1;
 }
 
 .slideIn-enter.slideIn-enter-active {
@@ -78,7 +80,6 @@
 
 .fadeIn-enter {
 	opacity: 0;
-  z-index: 1;
 }
 
 .fadeIn-enter.fadeIn-enter-active {
@@ -93,7 +94,6 @@
 
 .slideInRight-enter {
 	transform: translateX(100%);
-	z-index: 1;
 }
 
 .slideInRight-enter.slideInRight-enter-active {
@@ -103,20 +103,19 @@
 
 .slideInRight-exit.slideInRight-exit-active {
 	transform: translateX(100%);
-  transition: opacity 500ms ease-out;
+	transition: transform 300ms ease-out;
 }
 
-.slideInLeft-enter {
+.slideOutLeft-enter {
+	transform: translateX(-100%);
+}
+
+.slideOutLeft-enter.slideOutLeft-enter-active {
 	transform: translateX(0);
-	z-index: 1;
-}
-
-.slideInLeft-enter.slideInLeft-enter-active {
-	transform: translateX(100%);
 	transition: transform 500ms ease-out;
 }
 
-.slideInLeft-exit.slideInLeft-exit-active {
-	transform: translateX(0);
-  transition: opacity 300ms ease-out;
+.slideOutLeft-exit.slideOutLeft-exit-active {
+	transform: translateX(-100%);
+  transition: transform 300ms ease-out;
 }

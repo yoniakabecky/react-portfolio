@@ -7,7 +7,7 @@ import cx from "classnames";
 import './ModalNav.scss';
 import * as ROUTES from '../../constants/routes';
 
-function ModalHeader({ location, isBgGray }) {
+function ModalNav({ location, isBgGray }) {
   const pathName = location.pathname;
   const getPageName = () => {
     return pathName.replace('/', '');
@@ -25,4 +25,4 @@ function ModalHeader({ location, isBgGray }) {
   );
 }
 
-export default withRouter(ModalHeader);
+export default withRouter(ModalNav);
