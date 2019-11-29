@@ -17,7 +17,7 @@ function Home() {
   });
 
   const MainContents = () => (
-    <div id="container">
+    <div>
       <div className={cx("container", { justifyCenter: isMobile, alignItemCenter: isMobile })} style={{ height: "100vh" }}>
         <div className={cx({ left: !isMobile, nameWrapper: !isMobile, textAlignCenter: isMobile })}>
           <h1 id="myName" className="red font-accent">Yoni</h1>
