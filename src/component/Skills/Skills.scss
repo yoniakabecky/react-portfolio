@@ -316,10 +316,9 @@
   position: relative;
   min-width: 30rem;
   height: 20rem;
-  background-color: $tomato;
+  background-color: $dark;
   margin: 2.5rem 1rem;
-  // cursor: pointer;
-  cursor: not-allowed;
+  cursor: pointer;
   
   .projectImages {
     width: 30rem;
@@ -329,6 +328,8 @@
     background-position: center;
     background-color: $dark;
     background-size: 20rem 20rem;
+    opacity: .5;
+    filter: blur(.2rem);
   }
 
   #game21Img {
@@ -346,15 +347,20 @@
     background-size: 30rem 20rem;
   }
 
+  #vectorImg {
+    background-image: $vectorImage;
+    background-size: 17rem;
+  }
+
   #octcatImg {
-    background-image: $octcatImg;
+    background-image: $octcatImage;
     background-size: 20rem 20rem;
   }
 
   .projectDescription{
     text-align: center;
     color: $light;
-    opacity: 0;
+    opacity: .8;
     transition: .5s ease;
     position: absolute;
     top: 50%;
@@ -363,18 +369,23 @@
     -ms-transform: translate(-50%, -50%);
 
     h6 {
+      margin-bottom: .5rem;
       border-bottom: .2rem solid;
+    }
+
+    p {
+      font-size: 1.5rem;
     }
   }
 
   &:hover {
     img, .projectImages {
-      opacity: .5;
+      opacity: 1;
       transition: all .5s;
-      filter: blur(.2rem);
+      filter: none;
     }
     .projectDescription {
-      opacity: 1;
+      opacity: 0;
     }
   }
 }

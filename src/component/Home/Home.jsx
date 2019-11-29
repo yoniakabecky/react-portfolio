@@ -7,7 +7,9 @@ import { TransitionMotion, spring } from 'react-motion';
 import './Home.scss';
 import * as ROUTES from '../../constants/routes';
 
+// for React Motion
 const leavingSpringConfig = { stiffness: 60, damping: 15 };
+
 
 function Home() {
   const isMobile = useMediaQuery({
