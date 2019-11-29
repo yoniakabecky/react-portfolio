@@ -70,24 +70,6 @@ function Skills() {
         <div id="myWorks" className="mb-5">
           <h5>My Works</h5>
           <div className="projects">
-            <a href="https://yoniakabecky.github.io/blackjack-js/" rel="noopener noreferrer" target="_blank">
-              <div className="projectItems" style={{ cursor: "pointer" }}>
-                <div className="projectImages" id="game21Img"></div>
-                <div className="projectDescription">
-                  <h6>21</h6>
-                  <p>Black Jack</p>
-                </div>
-              </div>
-            </a>
-            <a href="https://yoniakabecky.github.io/javascript-portfolio/" rel="noopener noreferrer" target="_blank">
-              <div className="projectItems" style={{ cursor: "pointer" }}>
-                <div className="projectImages" id="jsPortfolioImg"></div>
-                <div className="projectDescription">
-                  <h6>Portfolio</h6>
-                  <p>w/ JavaScript</p>
-                </div>
-              </div>
-            </a>
             {myProjects.map((project, index) => (
               <Link to={project.linkTo} key={index}>
                 <div className="projectItems" key={index}>
