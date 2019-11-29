@@ -1,16 +1,13 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { PageContext } from '../../contexts/PageContext';
 
 import './ModalNav.scss';
 
 const ProjectNav = () => {
   const history = useHistory();
-  const { checkPrevPage } = useContext(PageContext);
 
   const redirectToSkills = () => {
-    checkPrevPage(true);
     history.push(ROUTES.SKILLS);
   }
 
