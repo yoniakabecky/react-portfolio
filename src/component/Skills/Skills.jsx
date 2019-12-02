@@ -9,7 +9,7 @@ import {
   faHtml5, faCss3, faSass, faJs, faReact,
   faGitAlt, faNodeJs, faFigma,
 } from '@fortawesome/free-brands-svg-icons';
-import { faPuzzlePiece, faMobileAlt, faSmile, faUtensils } from '@fortawesome/free-solid-svg-icons';
+import { faPuzzlePiece, faMobileAlt, faSmile, faUtensils, faAngleDown } from '@fortawesome/free-solid-svg-icons';
 
 import { ReactComponent as ReduxIcon } from '../../resources/icons/redux.svg';
 import { ReactComponent as FirebaseIcon } from '../../resources/icons/firebase.svg';
@@ -67,8 +67,15 @@ function Skills() {
           </div>
         </div>
 
+        <div className="scrollArrow">
+          <FontAwesomeIcon icon={faAngleDown} className="icons" />
+          <p>scroll</p>
+        </div>
+
+
         <div id="myWorks" className="mb-5">
-          <h5>My Works</h5>
+          <h5>My Works <span>(Click to See the Detail)</span> </h5>
+
           <div className="projects">
             {myProjects.map((project, index) => (
               <Link to={project.linkTo} key={index}>

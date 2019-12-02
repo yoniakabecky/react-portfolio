@@ -1,12 +1,14 @@
 import React from 'react';
-import ProjectNav from '../ModalNav/ProjectNav';
+import { Link } from 'react-router-dom';
+import * as ROUTES from '../../constants/routes';
 
+import ProjectNav from '../ModalNav/ProjectNav';
 import './Project.scss';
 
 import mock from '../../resources/projects/bj/mock21.png';
 import cards from '../../resources/projects/bj/cards.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faPlay, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectBJ = () => {
 
@@ -20,7 +22,7 @@ const ProjectBJ = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h6>Simple Card Game</h6>
+        <h5>Simple Card Game</h5>
         <h6>Skills: HTML5, SASS, JavaScript</h6>
         <br />
         <div className="projectImages">
@@ -30,6 +32,13 @@ const ProjectBJ = () => {
           <p>Play Game <FontAwesomeIcon icon={faPlay} className="playIcon" /></p>
         </a>
       </div>
+
+      <>
+        <Link to={ROUTES.SCHEDULER} className="projectFooter arrowNext">
+          next project
+          <FontAwesomeIcon icon={faChevronRight} className="footerIcons" />
+        </Link>
+      </>
     </div>
   )
 }

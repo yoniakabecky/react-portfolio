@@ -33,6 +33,7 @@
   height: 100%;
 
   h2 {
+    text-align: center;
     margin: 0 auto;
   }
 }
@@ -52,8 +53,8 @@
 }
 
 .projectImages {
-  margin: 3rem auto 5rem auto;
-
+  margin: 3rem auto 0 auto;
+  width: 80vw; 
   img {
     max-width: 100rem;
     width: 80vw; 
@@ -67,6 +68,13 @@
 }
 
 #bj_cards {
+  width: 7rem;
+  position: absolute;
+  right: 14vw;
+  top: 24rem;
+}
+
+#ciccc_logo {
   width: 7rem;
   position: absolute;
   right: 14vw;
