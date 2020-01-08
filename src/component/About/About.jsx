@@ -1,11 +1,10 @@
 import React from 'react';
 import ModalNav from '../ModalNav/ModalNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFutbol } from '@fortawesome/free-regular-svg-icons';
 import { faCanadianMapleLeaf } from '@fortawesome/free-brands-svg-icons';
-import { faFilm, faBeer, faCoffee } from '@fortawesome/free-solid-svg-icons';
 import { useMediaQuery } from 'react-responsive';
 import cx from "classnames";
+import { ReactComponent as Football } from '../../resources/icons/football.svg';
 
 import './About.scss';
 
@@ -34,10 +33,45 @@ function About() {
             Also I like these things.<br />
             Do we have interests in common?
           </p>
-          <FontAwesomeIcon icon={faFilm} className="icons" style={{ color: "#222" }} />
-          <FontAwesomeIcon icon={faFutbol} className="icons" style={{ color: "#2679ff" }} />
-          <FontAwesomeIcon icon={faBeer} className="icons" style={{ color: "#F28E1C" }} />
-          <FontAwesomeIcon icon={faCoffee} className="icons" style={{ color: "#ff91a4" }} />
+
+          <div className="displayFlex">
+
+            <div className="hobbyIcons" id="beerIcon">
+              <span className="beerHandle"></span>
+              <div className="beerGlass">
+                <span className="beerGlassLine"></span>
+                <div className="beerEmpty"></div>
+                <div className="beer"></div>
+              </div>
+            </div>
+
+            <div className="hobbyIcons" id="soccerIcon">
+              <Football />
+            </div>
+
+            <div className="hobbyIcons" id="movieIcon">
+              <div className="clapper" id="clapperUp"></div>
+              <div className="clapper" id="clapperBottom"></div>
+              <div className="blackBoard">
+                <div className="lineForBoard" id="titleSpace">Yoni</div>
+                <div className="lineForBoard">1</div>
+                <div className="lineForBoard" id="middleSpace">42</div>
+                <div className="lineForBoard"></div>
+                <div className="lineForBoard" id="descriptionSpace"></div>
+              </div>
+            </div>
+
+            <div className="hobbyIcons" id="coffeeIcon">
+              <span className="cupHandle"></span>
+              <div className="cup">
+                <div className="steam"></div>
+                <span className="steam"></span>
+                <span className="steam"></span>
+              </div>
+              <div className="cupSaucer"></div>
+            </div>
+
+          </div>
         </div>
       </div>
     </div>

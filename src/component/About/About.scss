@@ -34,3 +34,288 @@
     font-size: 6rem; 
   }
 }
+
+.displayFlex {
+  display: flex;
+}
+
+.hobbyIcons {
+  position: relative;
+  // width: 8rem;
+  height: 7rem;
+  margin: 0 1rem;
+  align-self: flex-end;
+}
+
+/** beer */
+#beerIcon {
+  bottom: -1.5rem;
+  width: 6rem;
+
+  &:hover {
+    .beerEmpty {
+      animation: 1.5s ease forwards pour;
+    }
+  } 
+}
+
+.beerGlass {
+  display: block;
+  position: relative;
+  width: 4.3rem;
+  height: 5.5rem;
+  border: .3rem solid #999;
+  border-top: none;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+  overflow: hidden;
+}
+    
+.beerHandle {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 2.7rem;
+  width: 3rem;
+  height: 3.2rem;
+  border: .5rem solid #999;
+  border-radius: 1.3rem 1rem;  
+}
+
+.beer {
+  background-color: gold;
+  border-top: .8rem solid white;
+  width: 4.3rem;
+  height: 5.5rem;
+}
+
+.beerEmpty {
+  width: 4.3rem;
+  height: 5.5rem;
+  z-index: 10;
+  background-color: #aaa;
+}
+
+.beerGlassLine {
+  content: "";               
+  position: absolute;
+  width: .6rem;
+  height: 2.5rem;
+  background-color: rgba(0,0,0,0.2);
+  border-radius: .25rem;
+  z-index: 90;
+  margin: auto;
+  top: 1.5rem;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  box-shadow: 1.1rem 0 0 0 rgba(0,0,0,0.2), -1.1rem 0 0 0 rgba(0,0,0,0.2);
+}
+
+/** coffee */
+#coffeeIcon {
+  bottom: -3rem;
+  
+  &:hover {
+    .steam {
+      animation: 2s ease infinite steam;
+    }
+  }
+}
+
+.cup {
+  position: relative;
+  width: 4rem;
+  height: 3rem;
+  margin-left: .7rem;
+  background-color: #eee;
+  border: .3rem solid #eee;
+  border-top: none;
+  border-bottom-left-radius: 1.2rem;
+  border-bottom-right-radius: 1.2rem;
+
+}
+    
+.cupHandle {
+  content: "";
+  position: absolute;
+  top: .4rem;
+  left: 3.5rem;
+  width: 2.2rem;
+  height: 1.5rem;
+  border: .3rem solid #eee;
+  border-radius: 1rem 1rem;  
+}
+
+.cupSaucer {
+  content: "";
+  margin-top: .2rem;
+  width: 5.5rem;
+  height: .6rem;
+  background-color: #eee;
+  border-bottom-left-radius: .5rem;
+  border-bottom-right-radius: .5rem;
+}
+
+
+.steam {
+  position: relative;
+  display: inline-block;
+  background-color: red;
+  height: .5rem;
+  width: .5rem;
+  transform: rotate(45deg);
+  margin:  .3rem; 
+  opacity: 0;
+}
+
+.steam:before,
+.steam:after {
+  content: "";
+  background-color: red;
+  border-radius: 50%;
+  height: .5rem;
+  width: .5rem;
+  position: absolute;
+}
+
+.steam:before {
+  bottom: 0;
+  left: -.3rem;
+}
+.steam:after {
+  bottom: .3rem;
+  left: 0;
+}
+
+
+/** clapperboard */
+#movieIcon {
+  bottom: -1.5rem;
+  margin: auto 1.5rem;
+
+  &:hover {
+    #clapperUp {
+      transform: rotate(0deg);
+      transform-origin: 0% 100%;
+    }
+  }
+}
+
+.clapper {
+  width: 6rem;
+  height: .8rem;
+}
+
+#clapperUp {
+  background: repeating-linear-gradient(
+    45deg,
+    #222,
+    #222 1rem,
+    #eee 1rem,
+    #eee 2rem
+  );
+  transform: rotate(-15deg);
+  transform-origin: 0% 100%;
+}
+
+#clapperBottom {
+  background: repeating-linear-gradient(
+    -45deg,
+    #222,
+    #222 1rem,
+    #eee 1rem,
+    #eee 2rem
+  );
+}
+
+.blackBoard {
+  width: 6rem;
+  height: 4rem;
+  background-color: #222;
+  color: #eee;
+  border: .2rem solid #222;
+  border-top: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+
+
+  .lineForBoard {
+    text-align: center;
+    border-bottom: .1rem solid #eee;
+  }
+  
+  #titleSpace, #descriptionSpace {
+    grid-column: span 3;
+  }
+    
+  #titleSpace {
+    text-align: left  
+  }
+  
+  #middleSpace {
+    border-left: .1rem solid #eee;
+    border-right: .1rem solid #eee;
+  }
+
+  #descriptionSpace {
+    border-bottom: none;
+  }
+}
+
+
+/** soccer boll*/
+#soccerIcon {
+  width: 6rem;
+  height: 6rem;
+  vertical-align: bottom;
+
+  .whiteParts {
+    fill: #eee;
+  }
+
+  .blackParts {
+    fill: #222;
+  }
+
+  &:hover {
+    .blackParts {
+      fill: #bb8c5d;
+    }
+  
+    animation: 3s linear infinite spin;
+  }
+
+}
+
+/** animation */
+@keyframes pour {
+  0% {
+    height: 100%;
+  }
+    
+  100% {
+    height: 0%;
+  }
+}
+
+@keyframes steam {
+  0% {
+    top: -1rem;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: -2.5rem;
+    opacity: 0;
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
