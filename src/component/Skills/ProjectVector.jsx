@@ -8,7 +8,6 @@ import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './Project.scss';
 import mock from '../../resources/projects/vector/vector_mock.png';
-// import mock from '../../resources/projects/portfolio/mockPortfolio.png';
 import stamp from '../../resources/projects/vector/stamp.png';
 
 

@@ -313,6 +313,11 @@
   -webkit-animation: scroll 2s infinite;
   animation: scroll 2s infinite;
 
+  position: fixed;
+  right: 5rem;
+  bottom: 5vh;
+  z-index: 10;
+
   .icons {
     font-size: 3rem;
     margin: 0 auto;
@@ -320,8 +325,12 @@
 
   p {
     font-size: 1rem;
-    margin-top: -1rem;;
+    margin-top: -1rem;
   }
+}
+
+.displayNone {
+  display: none;
 }
 
 @-webkit-keyframes scroll {

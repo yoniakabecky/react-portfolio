@@ -50,11 +50,46 @@ function Skills() {
     query: '(max-width: 640px)'
   });
 
+  const arrowRef = React.useRef(null);
+
+  const [arrowScroll, setArrowScroll] = React.useState(true);
+  const [documentHeight, setDocumentHeight] = React.useState(0);
+  const [screenHeight, setScreenHeight] = React.useState(0);
+  const [yOffset, setYOffset] = React.useState(0);
+
+  const handleScroll = React.useCallback(() => {
+    setYOffset(window.pageYOffset);
+
+    if (yOffset !== 0) {
+      if (yOffset + (screenHeight * .2) > documentHeight - screenHeight) {
+        setArrowScroll(false);
+      } else {
+        setArrowScroll(true);
+      }
+    }
+  }, [yOffset, documentHeight, screenHeight]);
+
+
+  React.useEffect(() => {
+    setDocumentHeight(arrowRef.current.scrollHeight);
+    setScreenHeight(window.innerHeight);
+
+    window.addEventListener("scroll", handleScroll, true);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [handleScroll])
 
   return (
-    <div>
+    <div ref={arrowRef}>
       <ModalNav isBgGray={false} />
       <div className={cx("container", { alignItemCenter: isMobile })}>
+
+        {arrowScroll ?
+          <div className="scrollArrow">
+            <FontAwesomeIcon icon={faAngleDown} className="icons" />
+            <p>scroll</p>
+          </div>
+          : null}
+
         <div id="mySkills">
           <h5>My Skills</h5>
           <div className="skills">
@@ -67,15 +102,8 @@ function Skills() {
           </div>
         </div>
 
-        <div className="scrollArrow">
-          <FontAwesomeIcon icon={faAngleDown} className="icons" />
-          <p>scroll</p>
-        </div>
-
-
         <div id="myWorks" className="mb-5">
           <h5>My Works <span>(Click to See the Detail)</span> </h5>
-
           <div className="projects">
             {myProjects.map((project, index) => (
               <Link to={project.linkTo} key={index}>
@@ -99,6 +127,7 @@ function Skills() {
             </a>
           </div>
         </div>
+
       </div>
     </div >
   );
