@@ -1,6 +1,5 @@
 # Portfolio
   
-  https://yoni-react-portfolio.firebaseapp.com
+  https://yoniakabecky.com
   
 using ReactJS (create-react-app) / Sass / Firebase(hosting)  
-still editing... will finish soon
