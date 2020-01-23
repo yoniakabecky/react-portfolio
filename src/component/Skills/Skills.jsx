@@ -9,7 +9,10 @@ import {
   faHtml5, faCss3, faSass, faJs, faReact,
   faGitAlt, faNodeJs, faFigma,
 } from '@fortawesome/free-brands-svg-icons';
-import { faPuzzlePiece, faMobileAlt, faSmile, faUtensils, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import {
+  faPuzzlePiece, faMobileAlt, faSmile,
+  faUtensils, faAngleDown, faSmileWink,
+} from '@fortawesome/free-solid-svg-icons';
 
 import { ReactComponent as ReduxIcon } from '../../resources/icons/redux.svg';
 import { ReactComponent as FirebaseIcon } from '../../resources/icons/firebase.svg';
@@ -33,7 +36,7 @@ const mySkills = [
   { name: "Illustrator", wrapper: "illustrator", icon: "Ai", tooltipId: "illustrator" },
   { name: "Figma", wrapper: "figma", icon: <FontAwesomeIcon icon={faFigma} />, tooltipId: "figma" },
   { name: "Hospitality", wrapper: "hospitality", icon: <FontAwesomeIcon icon={faUtensils} />, tooltipId: "hospitality" },
-  { name: "human", wrapper: "", icon: <FontAwesomeIcon icon={faSmile} />, tooltipId: "" },
+  { name: "Happy!!", wrapper: "human", icon: <FontAwesomeIcon icon={faSmile} />, tooltipId: "human" },
 ];
 
 const myProjects = [

@@ -8,18 +8,6 @@
 
 
 /** skills list */
-%circle {
-  background: #999;
-  color: #333;
-  border-radius: 100%;
-  width: 10rem;
-  height: 10rem;
-  text-align: center;
-  line-height: 10rem;
-  transform: translate3d(0, 0, 0);
-  transition: transform ease-out 200ms;
-}
-
 .skillOpen {
   display: none;
 }
@@ -34,24 +22,32 @@
 }
 
 .skillItems {
-  @extend %circle;
+  width: 4rem;
+  text-align: center;
+  line-height: 8rem;
+  transform: translate3d(0, 0, 0);
 
-  margin: 4rem 3rem;
-
-  &:hover {
-    background: $light;
-    transition: all 1s;
-  }
+  margin: 2rem 4rem 4rem 4rem;
+  transition: all .8s;
 }
 
 .svgIcon {
   width: 5rem;
   height: 100%;
-  fill: #333;
+  fill: $light;
+  transition: all .8s;
 }
 
 #muiIcon {
   width: 4rem;
+}
+
+#firebaseIcon {
+  margin-left: -.5rem;
+}
+
+#reduxIcon {
+  margin-left: -.3rem;
 }
 
 .html {
@@ -88,7 +84,6 @@
   &:hover {
     #reduxIcon {
       fill: $redux;
-      transition: all 1s;
     }
   }
 }
@@ -109,7 +104,6 @@
   &:hover {
     #firebaseIcon {
       fill: $firebase;
-      transition: all 1s;
     }
   }
 }
@@ -142,7 +136,6 @@
   &:hover {
     #muiIcon {
       fill: $mui;
-      transition: all 1s;
     }
   }
 }
@@ -165,18 +158,18 @@
 }
 
 .tooltip .tooltipText {
-  visibility: hidden;
-  background-color: black;
-  color: #fff;
+  background-color: $light;
+  color: $dark;
   text-align: center;
   border-radius: 0.5rem;
   padding: 1rem;
   line-height: 1.5rem;
   position: absolute;
   z-index: 1;
-  top: 120%;
+  top: 100%;
   left: 50%;
   transform: translateX(-50%);
+  transition: all .8s;
 }
 
 .tooltip .tooltipText::after {
@@ -186,123 +179,112 @@
   top: 0;
   border: 1rem solid transparent;
   transform: translate(-50%, -100%);
-  border-bottom-color: black;
+  border-bottom-color: $light;
+  transition: all .8s;
 }
 
-.tooltip:hover .tooltipText {
-  visibility: visible;
-}
-
-#html {
-  background-color: $html;
-  &::after {
-    border-bottom-color: $html;
+.tooltip:hover {
+  #human {
+    color: $tomato;
   }
-}
-
-#css {
-  background-color: $css;
-  &::after {
-    border-bottom-color: $css;
+  #html {
+    background-color: $html;
+    color: $light;
+    &::after {
+      border-bottom-color: $html;
+    }
   }
-}
-
-#sass {
-  background-color: $sass;
-  &::after {
-    border-bottom-color: $sass;
+  #css {
+    background-color: $css;
+    color: $light;
+    &::after {
+      border-bottom-color: $css;
+    }
   }
-}
-
-#js {
-  background-color: $js;
-  color: $dark;
-  &::after {
-    border-bottom-color: $js;
+  #sass {
+    background-color: $sass;
+    color: $light;
+    &::after {
+      border-bottom-color: $sass;
+    }
   }
-}
-
-#react {
-  background-color: $react;
-  color: $dark;
-  &::after {
-    border-bottom-color: $react;
+  #js {
+    background-color: $js;
+    &::after {
+      border-bottom-color: $js;
+    }
   }
-}
-
-#redux {
-  background-color: $redux;
-  &::after {
-    border-bottom-color: $redux;
+  #react {
+    background-color: $react;
+    &::after {
+      border-bottom-color: $react;
+    }
   }
-}
-
-#git {
-  background-color: $git;
-  &::after {
-    border-bottom-color: $git;
+  #redux {
+    background-color: $redux;
+    color: $light;
+    &::after {
+      border-bottom-color: $redux;
+    }
   }
-}
-
-#illustrator {
-  background-color: $illustrator;
-  color: $dark;
-  &::after {
-    border-bottom-color: $illustrator;
+  #git {
+    background-color: $git;
+    color: $light;
+    &::after {
+      border-bottom-color: $git;
+    }
   }
-}
-
-#firebase {
-  background-color: $firebase;
-  color: $dark;
-  &::after {
-    border-bottom-color: $firebase;
+  #illustrator {
+    background-color: $illustrator;
+    &::after {
+      border-bottom-color: $illustrator;
+    }
   }
-}
-
-#solving {
-  background-color: $solving;
-  color: $dark;
-  &::after {
-    border-bottom-color: $solving;
+  #firebase {
+    background-color: $firebase;
+    &::after {
+      border-bottom-color: $firebase;
+    }
   }
-}
-
-#nodejs {
-  background-color: $nodejs;
-  &::after {
-    border-bottom-color: $nodejs;
+  #solving {
+    background-color: $solving;
+    &::after {
+      border-bottom-color: $solving;
+    }
   }
-}
-
-#figma {
-  background-color: $figma;
-  color: $dark;
-  &::after {
-    border-bottom-color: $figma;
+  #nodejs {
+    background-color: $nodejs;
+    color: $light;
+    &::after {
+      border-bottom-color: $nodejs;
+    }
   }
-}
-
-#mui {
-  background-color: $mui;
-  color: $dark;
-  &::after {
-    border-bottom-color: $mui;
+  #figma {
+    background-color: $figma;
+    &::after {
+      border-bottom-color: $figma;
+    }
   }
-}
-
-#responsive {
-  background-color: $responsive;
-  &::after {
-    border-bottom-color: $responsive;
+  #mui {
+    background-color: $mui;
+    &::after {
+      border-bottom-color: $mui;
+    }
   }
-}
-
-#hospitality {
-  background-color: $hospitality;
-  &::after {
-    border-bottom-color: $hospitality;
+  #responsive {
+    background-color: $responsive;
+    color: $light;
+    &::after {
+      border-bottom-color: $responsive;
+    }
   }
+  #hospitality {
+    background-color: $hospitality;
+    color: $light;
+    &::after {
+      border-bottom-color: $hospitality;
+    }
+  }  
 }
 
 
@@ -478,12 +460,6 @@
 
 /** responsive */
 @media screen and (max-width: 640px) {
-  %circle {
-    width: 7rem;
-    height: 7rem;
-    line-height: 7rem;
-    font-size: 3rem;
-  }
   #mySkills,
   #myWorks {
     text-align: center;
@@ -492,14 +468,22 @@
     font-size: 10rem;
   }
   .skillItems {
-    margin-top: 7rem;
+    margin-top: 3rem;
     left: 5vw;
+    line-height: 5rem;
+    font-size: 3rem;
   }
   .svgIcon {
     width: 4rem;
   }
+  .redux {
+    margin-top: 2.5rem;
+  }
   #muiIcon {
     width: 3.5rem;
+  }
+  .tooltip .tooltipText::after {
+    display: none;
   }
 }
 
