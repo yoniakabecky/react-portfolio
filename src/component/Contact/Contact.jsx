@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalNav from '../ModalNav/ModalNav';
+import ModalNav from '../Layout/ModalNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons';
 import { faLinkedinIn, faInstagram } from '@fortawesome/free-brands-svg-icons';

@@ -1,10 +1,8 @@
 import React from 'react';
-import ProjectNav from '../ModalNav/ProjectNav';
+import ProjectNav from '../Layout/ProjectNav';
+import ProjectFooter from '../Layout/ProjectFooter';
 
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import './Project.scss';
 import mock from '../../resources/projects/scheduler-topPage.jpg';
@@ -29,16 +27,8 @@ const ProjectScheduler = () => {
         </div>
       </div>
 
-      <>
-        <Link to={ROUTES.BJ} className="projectFooter arrowPrev">
-          <FontAwesomeIcon icon={faChevronLeft} className="footerIcons" />
-          prev project
-        </Link>
-        <Link to={ROUTES.ASSIGNMENT} className="projectFooter arrowNext">
-          next project
-          <FontAwesomeIcon icon={faChevronRight} className="footerIcons" />
-        </Link>
-      </>
+      <ProjectFooter prev next prevLink={ROUTES.BJ} nextLink={ROUTES.ASSIGNMENT} />
+
     </div>
   )
 }

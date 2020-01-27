@@ -292,7 +292,6 @@
 .scrollArrow {
   margin: 0 auto;
   text-align: center;
-  -webkit-animation: scroll 2s infinite;
   animation: scroll 2s infinite;
 
   position: fixed;
@@ -313,20 +312,6 @@
 
 .displayNone {
   display: none;
-}
-
-@-webkit-keyframes scroll {
-	0% { 
-		-webkit-transform: translate(0, 0); 
-		opacity: 0; 
-	}
-	50% { 
-		opacity: 1; 
-	}
-	100% {
-		-webkit-transform: translate(0, 0.8rem);
-		opacity: 0;
-	}
 }
 
 @keyframes scroll {
@@ -434,27 +419,6 @@
       opacity: 0;
     }
   }
-}
-
-.projectFooter {
-  font-size: 2rem;
-  text-decoration: none;
-  color: white;
-  margin-bottom: 2rem;
-}
-
-.arrowPrev {
-  position: absolute;
-  left: 2.5%;
-
-}
-.arrowNext {
-  position: absolute;
-  right: 2.5%;
-}
-
-.footerIcons {
-  margin: 0 1rem;
 }
 
 

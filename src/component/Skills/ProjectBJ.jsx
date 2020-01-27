@@ -1,14 +1,14 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
 
-import ProjectNav from '../ModalNav/ProjectNav';
+import ProjectNav from '../Layout/ProjectNav';
+import ProjectFooter from '../Layout/ProjectFooter';
 import './Project.scss';
 
 import mock from '../../resources/projects/bj/mock21.png';
 import cards from '../../resources/projects/bj/cards.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlay, faChevronRight } from '@fortawesome/free-solid-svg-icons';
+import { faPlay } from '@fortawesome/free-solid-svg-icons';
 
 const ProjectBJ = () => {
 
@@ -33,12 +33,8 @@ const ProjectBJ = () => {
         </a>
       </div>
 
-      <>
-        <Link to={ROUTES.SCHEDULER} className="projectFooter arrowNext">
-          next project
-          <FontAwesomeIcon icon={faChevronRight} className="footerIcons" />
-        </Link>
-      </>
+      <ProjectFooter next nextLink={ROUTES.SCHEDULER} />
+
     </div>
   )
 }

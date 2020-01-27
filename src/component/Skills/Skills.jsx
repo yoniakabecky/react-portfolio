@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalNav from '../ModalNav/ModalNav';
+import ModalNav from '../Layout/ModalNav';
 import { useMediaQuery } from 'react-responsive';
 import cx from "classnames";
 import { Link } from 'react-router-dom';
@@ -11,7 +11,7 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 import {
   faPuzzlePiece, faMobileAlt, faSmile,
-  faUtensils, faAngleDown, faSmileWink,
+  faUtensils, faAngleDown,
 } from '@fortawesome/free-solid-svg-icons';
 
 import { ReactComponent as ReduxIcon } from '../../resources/icons/redux.svg';

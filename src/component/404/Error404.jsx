@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalNav from '../ModalNav/ModalNav';
+import ModalNav from '../Layout/ModalNav';
 
 import piggy from '../../resources/piggy.png';
 

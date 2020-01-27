@@ -1,5 +1,5 @@
 import React from 'react';
-import ModalNav from '../ModalNav/ModalNav';
+import ModalNav from '../Layout/ModalNav';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCanadianMapleLeaf } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery } from 'react-responsive';

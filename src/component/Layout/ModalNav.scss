@@ -45,3 +45,24 @@
   text-decoration: none;
   cursor: pointer;
 }
+
+.projectFooter {
+  font-size: 2rem;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 2rem;
+}
+
+.arrowPrev {
+  position: absolute;
+  left: 2.5%;
+
+}
+.arrowNext {
+  position: absolute;
+  right: 2.5%;
+}
+
+.footerIcons {
+  margin: 0 1rem;
+}

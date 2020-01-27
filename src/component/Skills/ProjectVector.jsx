@@ -1,10 +1,8 @@
 import React from 'react';
-import ProjectNav from '../ModalNav/ProjectNav';
+import ProjectNav from '../Layout/ProjectNav';
+import ProjectFooter from '../Layout/ProjectFooter';
 
-import { Link } from 'react-router-dom';
 import * as ROUTES from '../../constants/routes';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 
 import './Project.scss';
 import mock from '../../resources/projects/vector/vector_mock.png';
@@ -32,12 +30,8 @@ const ProjectVector = () => {
         </div>
       </div>
 
-      <>
-        <Link to={ROUTES.PORTFOLIO} className="projectFooter arrowPrev">
-          <FontAwesomeIcon icon={faChevronLeft} className="footerIcons" />
-          prev project
-        </Link>
-      </>
+      <ProjectFooter prev prevLink={ROUTES.PORTFOLIO} />
+
     </div>
   )
 }
