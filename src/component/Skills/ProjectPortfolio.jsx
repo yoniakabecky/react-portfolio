@@ -24,7 +24,7 @@ const ProjectPortfolio = () => {
         <h6>Skills: HTML5 / SASS / JavaScript</h6>
         <br />
         <div className="projectImages">
-          <img src={mock} alt="mock_bj" />
+          <img src={mock} alt="mock_bj" rel="preload" />
         </div>
       </div>
 

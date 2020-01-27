@@ -10,8 +10,8 @@ import './Project.scss';
 
 import logo from '../../resources/projects/assignments/ciccc.svg';
 import crud from '../../resources/projects/assignments/gif_crud.gif';
-import bnb from '../../resources/projects/assignments/bnb.png';
-import ballet from '../../resources/projects/assignments/ballet.png';
+import bnb from '../../resources/projects/assignments/bnb.jpg';
+import ballet from '../../resources/projects/assignments/ballet.jpg';
 import mern from '../../resources/projects/assignments/mern.gif';
 
 const ProjectAssignment = () => {
@@ -21,7 +21,7 @@ const ProjectAssignment = () => {
       <div className="projectTopImage" id="assignmentTop">
         <div className="projectTitle">
           <h2>Projects at School</h2>
-          <img src={logo} alt="ciccc_logo" id="ciccc_logo" />
+          <img src={logo} alt="ciccc_logo" id="ciccc_logo" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
@@ -29,7 +29,7 @@ const ProjectAssignment = () => {
         <h6>Skills: MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap</h6>
         <br />
         <div className="projectImages">
-          <img src={mern} alt="mern" />
+          <img src={mern} alt="mern" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
@@ -37,7 +37,7 @@ const ProjectAssignment = () => {
         <h6>Skills: ReactJS, Redux, REST API, Material-ui</h6>
         <br />
         <div className="projectImages">
-          <img src={crud} alt="crud" />
+          <img src={crud} alt="crud" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
@@ -46,7 +46,7 @@ const ProjectAssignment = () => {
         <h6>Skills: HTML5, CSS3, Javascript</h6>
         <br />
         <div className="projectImages">
-          <img src={ballet} alt="ballet" />
+          <img src={ballet} alt="ballet" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
@@ -55,7 +55,7 @@ const ProjectAssignment = () => {
         <h6>Skills: HTML5, CSS3, Javascript</h6>
         <br />
         <div className="projectImages">
-          <img src={bnb} alt="bnb" />
+          <img src={bnb} alt="bnb" rel="preload" />
         </div>
       </div>
 

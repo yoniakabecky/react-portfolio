@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons';
 
 import './Project.scss';
-import mock from '../../resources/projects/scheduler-topPage.png';
+import mock from '../../resources/projects/scheduler-topPage.jpg';
 
 
 const ProjectScheduler = () => {
@@ -25,7 +25,7 @@ const ProjectScheduler = () => {
         <br />
         <p>Still in the progress... Coming soon</p>
         <div className="projectImages">
-          <img src={mock} alt="mock_bj" />
+          <img src={mock} alt="mock_bj" rel="preload" />
         </div>
       </div>
 

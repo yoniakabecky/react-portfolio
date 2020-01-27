@@ -27,8 +27,8 @@ const ProjectVector = () => {
         <div className="projectImages">
           <p>A Sticker set for Students who using "LINE" and School T-shirts</p>
           <p className="text-15">* LINE is the most popular communication app in Japan</p>
-          <img src={mock} alt="mock_bj" />
-          <img src={stamp} alt="stamp" />
+          <img src={mock} alt="mock_bj" rel="preload" />
+          <img src={stamp} alt="stamp" rel="preload" />
         </div>
       </div>
 

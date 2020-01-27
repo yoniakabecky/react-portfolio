@@ -109,7 +109,7 @@ function Skills() {
           <h5>My Works <span>(Click to See the Detail)</span> </h5>
           <div className="projects">
             {myProjects.map((project, index) => (
-              <Link to={project.linkTo} key={index}>
+              <Link to={project.linkTo} key={index} rel="preload">
                 <div className="projectItems" key={index}>
                   <div className="projectImages" id={project.img}></div>
                   <div className="projectDescription">

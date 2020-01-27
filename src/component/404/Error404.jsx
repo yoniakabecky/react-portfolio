@@ -12,7 +12,7 @@ const Error404 = () => {
           Oops!<br />
           Please check the URL.
         </h3>
-        <img src={piggy} alt="piggy" />
+        <img src={piggy} alt="piggy" rel="preload" />
         <h4 className="red">Page Not Found</h4>
       </div>
 
