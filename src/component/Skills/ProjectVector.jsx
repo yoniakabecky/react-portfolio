@@ -5,8 +5,8 @@ import ProjectFooter from '../Layout/ProjectFooter';
 import * as ROUTES from '../../constants/routes';
 
 import './Project.scss';
-import mock from '../../resources/projects/vector/vector_mock.png';
-import stamp from '../../resources/projects/vector/stamp.png';
+import mock from '../../resources/projects/vector/vector_mock.jpg';
+import stamp from '../../resources/projects/vector/stamp.jpg';
 
 
 const ProjectVector = () => {

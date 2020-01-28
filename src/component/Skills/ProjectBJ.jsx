@@ -5,7 +5,7 @@ import ProjectNav from '../Layout/ProjectNav';
 import ProjectFooter from '../Layout/ProjectFooter';
 import './Project.scss';
 
-import mock from '../../resources/projects/bj/mock21.png';
+import mock from '../../resources/projects/bj/mock21.jpg';
 import cards from '../../resources/projects/bj/cards.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons';

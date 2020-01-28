@@ -5,7 +5,7 @@ import ProjectFooter from '../Layout/ProjectFooter';
 import * as ROUTES from '../../constants/routes';
 
 import './Project.scss';
-import mock from '../../resources/projects/portfolio/mockPortfolio.png';
+import mock from '../../resources/projects/portfolio/mockPortfolio.jpg';
 
 const ProjectPortfolio = () => {
 

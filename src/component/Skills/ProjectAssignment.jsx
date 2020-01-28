@@ -7,7 +7,7 @@ import * as ROUTES from '../../constants/routes';
 import './Project.scss';
 
 import logo from '../../resources/projects/assignments/ciccc.svg';
-import crud from '../../resources/projects/assignments/gif_crud.gif';
+import crud from '../../resources/projects/assignments/curd.gif';
 import bnb from '../../resources/projects/assignments/bnb.jpg';
 import ballet from '../../resources/projects/assignments/ballet.jpg';
 import mern from '../../resources/projects/assignments/mern.gif';
