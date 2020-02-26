@@ -15,7 +15,20 @@ import ProjectBJ from '../Skills/ProjectBJ';
 import ProjectPortfolio from '../Skills/ProjectPortfolio';
 import ProjectScheduler from '../Skills/ProjectScheduler';
 import Error404 from '../404/Error404';
+import ProjectECommerce from '../Skills/ProjectECommerce';
 
+const routes = [
+  { path: ROUTES.HOME, component: Home },
+  { path: ROUTES.ABOUT, component: About },
+  { path: ROUTES.SKILLS, component: Skills },
+  { path: ROUTES.CONTACT, component: Contact },
+  { path: ROUTES.BJ, component: ProjectBJ },
+  { path: ROUTES.SCHEDULER, component: ProjectScheduler },
+  { path: ROUTES.PORTFOLIO, component: ProjectPortfolio },
+  { path: ROUTES.ASSIGNMENT, component: ProjectAssignment },
+  { path: ROUTES.VECTOR, component: ProjectVector },
+  { path: ROUTES.E_COMMERCE, component: ProjectECommerce }
+];
 
 function App() {
   const location = useLocation();
@@ -30,19 +43,20 @@ function App() {
   const transitionClassName = pathname === "/" ? "fadeIn" : pathname.startsWith("/project") ? "slideInRight" : "slideIn";
 
   return (
-    <Route render={({ location }) => (
+    <Route render={({ location, match }) => (
       <TransitionGroup>
-        <CSSTransition key={location.key} timeout={{ enter: 500, exit: 300 }} classNames={transitionClassName}>
+        <CSSTransition
+          in={match != null}
+          key={location.key}
+          timeout={500}
+          classNames={transitionClassName}
+          unmountOnExit
+        >
           <Switch location={location}>
-            <Route exact path={ROUTES.HOME} component={Home} />
-            <Route exact path={ROUTES.ABOUT} component={About} />
-            <Route exact path={ROUTES.SKILLS} component={Skills} />
-            <Route exact path={ROUTES.CONTACT} component={Contact} />
-            <Route exact path={ROUTES.BJ} component={ProjectBJ} />
-            <Route exact path={ROUTES.SCHEDULER} component={ProjectScheduler} />
-            <Route exact path={ROUTES.PORTFOLIO} component={ProjectPortfolio} />
-            <Route exact path={ROUTES.ASSIGNMENT} component={ProjectAssignment} />
-            <Route exact path={ROUTES.VECTOR} component={ProjectVector} />
+            {routes.map(({ path, component }) => (
+
+              <Route exact path={path} component={component} />
+            ))}
             <Route component={Error404} />
           </Switch>
         </CSSTransition>

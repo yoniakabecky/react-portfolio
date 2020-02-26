@@ -23,41 +23,55 @@ const ProjectAssignment = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Task: Employee Manager (Full-Stack)</h5>
-        <h6>Skills: MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap</h6>
-        <br />
+        <p>Task: Employee Manager (Full-Stack)</p>
+        <p>Skills: MongoDB, ExpressJS, ReactJS, NodeJS, Bootstrap</p>
+        <ul className="projectLinks">
+          <p>Links</p>
+          <li className="red">
+            <a href="https://github.com/yoniakabecky/Employees-Manager-React-Bootstrap" rel="noopener noreferrer" target="_blank" className="pageLink">
+              Github Repo
+          </a>
+          </li>
+        </ul>
         <div className="projectImages">
           <img src={mern} alt="mern" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Task: CRUD implementation using React and Redux</h5>
-        <h6>Skills: ReactJS, Redux, REST API, Material-ui</h6>
-        <br />
+        <p>Task: CRUD implementation using React and Redux</p>
+        <p>Skills: ReactJS, Redux, REST API, Material-ui</p>
+        <ul className="projectLinks">
+          <p>Links</p>
+          <li className="red">
+            <a href="https://github.com/yoniakabecky/assignment-react-and-redux" rel="noopener noreferrer" target="_blank" className="pageLink">
+              Github Repo
+          </a>
+          </li>
+        </ul>
         <div className="projectImages">
           <img src={crud} alt="crud" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Task: Website Revamping #1 (Group project)</h5>
-        <h6>Role: Make wire frame (sub pages), Coding & Reviewing </h6>
-        <h6>Skills: HTML5, CSS3, Javascript</h6>
+        <p>Task: Website Revamping #1 (Group project)</p>
+        <p>Role: Make wire frame (sub pages), Coding & Reviewing </p>
+        <p>Skills: HTML5, CSS3, Javascript</p>
         <br />
         <div className="projectImages">
           <img src={ballet} alt="ballet" rel="preload" />
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Task: Website Revamping #2 (Group project)</h5>
-        <h6>Role: Scheduling, Validate Contents & Coding </h6>
-        <h6>Skills: HTML5, CSS3, Javascript</h6>
+        <p>Task: Website Revamping #2 (Group project)</p>
+        <p>Role: Scheduling, Validate Contents & Coding </p>
+        <p>Skills: HTML5, CSS3, Javascript</p>
         <br />
         <div className="projectImages">
           <img src={bnb} alt="bnb" rel="preload" />
         </div>
       </div>
 
-      <ProjectFooter prev next prevLink={ROUTES.SCHEDULER} nextLink={ROUTES.PORTFOLIO} />
+      <ProjectFooter prev next prevLink={ROUTES.E_COMMERCE} nextLink={ROUTES.PORTFOLIO} />
     </div>
   )
 }

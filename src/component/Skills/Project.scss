@@ -21,6 +21,10 @@
   background-color: #764ABC;
 }
 
+#eCommerceTop {
+  background-color: #4CAF52;
+}
+
 #assignmentTop {
   background-color: #283B8A;
 }
@@ -46,23 +50,30 @@
   margin: 5rem auto;
   padding: 0 3rem;
   position: relative;
-}
 
-.text-15 {
-  font-size: 1.5rem;
+  h6, p {
+    font-size: 2rem;
+    font-family: 'Source Code Pro', ;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
 }
 
 .projectImages {
   margin: 3rem auto 0 auto;
-  width: 80vw; 
+  width: 100%; 
+
   img {
     max-width: 100rem;
-    width: 80vw; 
+    width: 100%; 
     margin-bottom: 3rem; 
   }
 }
 
 .pageLink {
+  font-size: 1.2rem;
   text-decoration: none;
   color: inherit;
 }
@@ -79,4 +90,17 @@
   position: absolute;
   right: 14vw;
   top: 24rem;
+}
+
+.projectLinks {
+  margin: 2rem 0;
+
+  p {
+    margin-bottom: 0;
+  }
+  li {
+    list-style-position: inside;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
 }

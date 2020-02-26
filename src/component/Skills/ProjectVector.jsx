@@ -19,12 +19,14 @@ const ProjectVector = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Client: Vector International Academy</h5>
-        <h6>Role: Designer & Illustrator</h6>
+        <p>Client: Vector International Academy</p>
+        <p>Role: Designer & Illustrator</p>
         <br />
+        <p>A Sticker set for Students who using "LINE" and School T-shirts</p>
+        <p style={{ fontSize: "1.5rem" }}>* LINE is the most popular communication app in Japan</p>
+
         <div className="projectImages">
-          <p>A Sticker set for Students who using "LINE" and School T-shirts</p>
-          <p className="text-15">* LINE is the most popular communication app in Japan</p>
+
           <img src={mock} alt="mock_bj" rel="preload" />
           <img src={stamp} alt="stamp" rel="preload" />
         </div>

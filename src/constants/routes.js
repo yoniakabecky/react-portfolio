@@ -7,3 +7,4 @@ export const SCHEDULER = '/project/scheduler';
 export const PORTFOLIO = '/project/portfolio';
 export const ASSIGNMENT = '/project/assignment';
 export const VECTOR = '/project/vector';
+export const E_COMMERCE = '/project/e-commerce';

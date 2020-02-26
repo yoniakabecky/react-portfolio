@@ -18,8 +18,8 @@ const ProjectPortfolio = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h5>First Attempt of My Portfolio</h5>
-        <h6>Skills: HTML5 / SASS / JavaScript</h6>
+        <p>First Attempt of My Portfolio</p>
+        <p>Skills: HTML5, SASS, JavaScript</p>
         <br />
         <div className="projectImages">
           <img src={mock} alt="mock_bj" rel="preload" />

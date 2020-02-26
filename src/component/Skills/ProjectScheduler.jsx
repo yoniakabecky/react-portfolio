@@ -18,9 +18,23 @@ const ProjectScheduler = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Shift Maker for Hourly Workers</h5>
-        <h6>Skills: HTML5, SASS, React, Redux, Material-ui, Firebase</h6>
-        <br />
+        <p>Shift Maker for Hourly Workers</p>
+        <p>Skills: HTML5, SASS, React, Redux, Material-ui, Firebase</p>
+
+        <ul className="projectLinks">
+          <p>Links</p>
+          <li className="red">
+            <a href="https://react-scheduler-yoni.firebaseapp.com/" rel="noopener noreferrer" target="_blank" className="pageLink">
+              https://react-scheduler-yoni.firebaseapp.com/
+          </a>
+          </li>
+          <li className="red">
+            <a href="https://github.com/yoniakabecky/react-scheduler" rel="noopener noreferrer" target="_blank" className="pageLink">
+              Github Repo
+          </a>
+          </li>
+        </ul>
+
         <p>Still in the progress... Coming soon</p>
         <div className="projectImages">
           <img src={mock} alt="mock_bj" rel="preload" />

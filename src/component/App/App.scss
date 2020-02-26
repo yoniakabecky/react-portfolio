@@ -73,37 +73,53 @@
 	transition: transform 500ms ease-out;
 }
 
-.slideIn-exit.slideIn-exit-active {
-	transform: translateY(100%);
+.slideIn-exit {
+	transform: translateX(0);
+}
+
+.slideIn-exit-active {
+	transform: translateX(-100%);
   transition: opacity 300ms ease-out;
 }
 
 .fadeIn-enter {
 	opacity: 0;
+	transform: scale(1.1);
 }
 
-.fadeIn-enter.fadeIn-enter-active {
+.fadeIn-enter-active {
 	opacity: 1;
-  transition: opacity 500ms ease-out;
+	transform: scale(1);
+  transition: all 500ms ease-out;
 }
 
-.fadeIn-exit.fadeIn-exit-active {
+.fadeIn-exit {
+	opacity: 1;
+	transform: scale(1);
+}
+
+.fadeIn-exit-active {
 	opacity: 0;
-  transition: opacity 300ms ease-in;
+	transform: scale(0.9);
+  transition: all 300ms ease-in;
 }
 
 .slideInRight-enter {
 	transform: translateX(100%);
 }
 
-.slideInRight-enter.slideInRight-enter-active {
+.slideInRight-enter-active {
 	transform: translateX(0);
 	transition: transform 500ms ease-out;
 }
 
-.slideInRight-exit.slideInRight-exit-active {
-	transform: translateX(100%);
-	transition: transform 300ms ease-out;
+.slideInRight-exit {
+	transform: translateX(0);
+}
+
+.slideInRight-exit-active {
+	transform: translateX(-100%);
+	transition: all 300ms ease-out;
 }
 
 .slideOutLeft-enter {

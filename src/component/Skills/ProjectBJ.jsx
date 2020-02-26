@@ -22,18 +22,29 @@ const ProjectBJ = () => {
         </div>
       </div>
       <div className="projectContainer">
-        <h5>Simple Card Game</h5>
+        <h6>A simple basic card game</h6>
         <h6>Skills: HTML5, SASS, JavaScript</h6>
-        <br />
+
+        <ul className="projectLinks">
+          <p>Links</p>
+          <li className="red">
+            <a href="https://yoniakabecky.github.io/blackjack-js/" rel="noopener noreferrer" target="_blank" className="pageLink">
+              Play Game <FontAwesomeIcon icon={faPlay} className="playIcon" />
+            </a>
+          </li>
+          <li className="red">
+            <a href="https://github.com/yoniakabecky/blackjack-js" rel="noopener noreferrer" target="_blank" className="pageLink">
+              Github Repo
+          </a>
+          </li>
+        </ul>
+
         <div className="projectImages">
           <img src={mock} alt="mock_bj" rel="preload" />
         </div>
-        <a href="https://yoniakabecky.github.io/blackjack-js/" rel="noopener noreferrer" target="_blank" className="pageLink">
-          <p>Play Game <FontAwesomeIcon icon={faPlay} className="playIcon" /></p>
-        </a>
       </div>
 
-      <ProjectFooter next nextLink={ROUTES.SCHEDULER} />
+      <ProjectFooter next nextLink={ROUTES.E_COMMERCE} />
 
     </div>
   )
