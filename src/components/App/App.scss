@@ -1,0 +1,135 @@
+@import "../../styles/variable";
+
+/** colors */
+.red {
+  color: $tomato;
+}
+
+.bg-gray {
+  background-color: #444;
+}
+
+.bg-dark {
+  background-color: $dark;
+}
+
+.bg-noColor {
+  background-color: transparent;
+}
+
+/** spacing */
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.mb-5 {
+  margin-bottom: 5rem;
+}
+
+/** body wrapper */
+.container {
+  width: 100vw;
+  height: 100vh;
+  min-height: 30rem;
+  display: flex;
+  flex-direction: column;
+  max-width: 110rem;
+  margin: 0 auto;
+  padding: 0 3rem;
+  position: relative;
+}
+
+.alignItemCenter {
+  align-items: center;
+}
+
+.justifyCenter {
+  justify-content: center;
+}
+
+.textAlignCenter {
+  text-align: center;
+}
+
+.left {
+  position: absolute;
+  left: 5rem;
+}
+
+.right {
+  position: absolute;
+  right: 5rem;
+}
+
+/** page switch animation */
+.slideIn-enter {
+  transform: translateY(100%);
+}
+
+.slideIn-enter.slideIn-enter-active {
+  transform: translateY(0);
+  transition: transform 500ms ease-out;
+}
+
+.slideIn-exit {
+  transform: translateX(0);
+}
+
+.slideIn-exit-active {
+  transform: translateX(-100%);
+  transition: opacity 300ms ease-out;
+}
+
+.fadeIn-enter {
+  opacity: 0;
+  transform: scale(1.1);
+}
+
+.fadeIn-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 500ms ease-out;
+}
+
+.fadeIn-exit {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fadeIn-exit-active {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: all 300ms ease-in;
+}
+
+.slideInRight-enter {
+  transform: translateX(100%);
+}
+
+.slideInRight-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-out;
+}
+
+.slideInRight-exit {
+  transform: translateX(0);
+}
+
+.slideInRight-exit-active {
+  transform: translateX(-100%);
+  transition: all 300ms ease-out;
+}
+
+.slideOutLeft-enter {
+  transform: translateX(-100%);
+}
+
+.slideOutLeft-enter.slideOutLeft-enter-active {
+  transform: translateX(0);
+  transition: transform 500ms ease-out;
+}
+
+.slideOutLeft-exit.slideOutLeft-exit-active {
+  transform: translateX(-100%);
+  transition: transform 300ms ease-out;
+}

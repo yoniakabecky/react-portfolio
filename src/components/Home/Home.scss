@@ -1,0 +1,72 @@
+@import "../../styles/variable";
+
+.nameWrapper {
+  text-align: right;
+  bottom: 5rem;
+}
+
+#myName {
+  font-size: 14rem;
+  line-height: 5rem;
+  margin-bottom: 0;
+  cursor: default;
+}
+
+.linkWrapper {
+  text-decoration: none;
+  list-style-type: none;
+  text-align: right;
+  top: 8rem;
+}
+
+.links {
+  color: $light;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: all 800ms ease;
+
+  &::after {
+    content: " ";
+    height: 1px;
+    width: 0%;
+    background-color: $tomato;
+    display: block;
+  }
+
+  &:hover {
+    color: $tomato;
+    &::after {
+      width: 100%;
+      transition: width 500ms ease;
+    }
+  }
+}
+
+/** responsive */
+@media screen and (max-width: 640px) {
+  #myPosition {
+    font-size: 4rem;
+  }
+  .linkWrapper {
+    margin-top: 8rem;
+    text-align: center;
+  }
+  .links {
+    font-size: 2.5rem;
+  }
+}
+
+/** react motion */
+.reactMotion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.reactMotionBall {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 99px;
+  position: absolute;
+  border: 0.2rem dotted $tomato;
+}

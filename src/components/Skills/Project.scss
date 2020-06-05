@@ -1,0 +1,107 @@
+@import "../../styles/variable";
+
+.projectTopImage {
+  width: 100vw;
+  height: 50vh;
+}
+
+#bjTop {
+  background-color: #ffa800;
+}
+
+#vectorTop {
+  background-color: #8ec63e;
+}
+
+#portfolioTop {
+  background-color: $tomato;
+}
+
+#schedulerTop {
+  background-color: #764abc;
+}
+
+#eCommerceTop {
+  background-color: #4caf52;
+}
+
+#assignmentTop {
+  background-color: #283b8a;
+}
+
+.projectTitle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  h2 {
+    text-align: center;
+    margin: 0 auto;
+  }
+}
+
+.projectContainer {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  max-width: 110rem;
+  margin: 5rem auto;
+  padding: 0 3rem;
+  position: relative;
+
+  h6,
+  p {
+    font-size: 2rem;
+    font-family: "Source Code Pro";
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+.projectImages {
+  margin: 3rem auto 0 auto;
+  width: 100%;
+
+  img {
+    max-width: 100rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+}
+
+.pageLink {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+#bj_cards {
+  width: 7rem;
+  position: absolute;
+  right: 14vw;
+  top: 24rem;
+}
+
+#ciccc_logo {
+  width: 7rem;
+  position: absolute;
+  right: 14vw;
+  top: 24rem;
+}
+
+.projectLinks {
+  margin: 2rem 0;
+
+  p {
+    margin-bottom: 0;
+  }
+  li {
+    list-style-position: inside;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}
