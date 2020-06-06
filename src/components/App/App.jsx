@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
-import { Switch, Route, withRouter, useLocation } from "react-router-dom";
+import { Switch, Route, useLocation } from "react-router-dom";
 
+import { fadeInFadeOut } from "../../animations/animations";
 import PageTransition from "../../animations/PageTransition";
 import Error404 from "../404/Error404";
 import "./App.scss";
@@ -25,10 +26,12 @@ function App() {
           </Route>
         ))}
 
-        <Route component={Error404} />
+        <PageTransition variants={fadeInFadeOut}>
+          <Route component={Error404} />
+        </PageTransition>
       </Switch>
     </AnimatePresence>
   );
 }
 
-export default withRouter(App);
+export default App;

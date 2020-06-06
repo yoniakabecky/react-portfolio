@@ -14,14 +14,14 @@ import ProjectScheduler from "../Skills/ProjectScheduler";
 import ProjectVector from "../Skills/ProjectVector";
 
 export default [
-  [ROUTES.HOME, <Home />, animation.slideInFadeOut],
-  [ROUTES.ABOUT, <About />, animation.slideInFadeOut],
-  [ROUTES.SKILLS, <Skills />, animation.slideInFadeOut],
-  [ROUTES.CONTACT, <Contact />, animation.slideInFadeOut],
-  [ROUTES.BJ, <ProjectBJ />, animation.slideInFadeOut],
-  [ROUTES.SCHEDULER, <ProjectScheduler />, animation.slideInFadeOut],
-  [ROUTES.PORTFOLIO, <ProjectPortfolio />, animation.slideInFadeOut],
-  [ROUTES.ASSIGNMENT, <ProjectAssignment />, animation.slideInFadeOut],
-  [ROUTES.VECTOR, <ProjectVector />, animation.slideInFadeOut],
-  [ROUTES.E_COMMERCE, <ProjectECommerce />, animation.slideInFadeOut],
+  [ROUTES.HOME, <Home />, animation.fadeInFadeOut],
+  [ROUTES.ABOUT, <About />, animation.slideInSlideOut],
+  [ROUTES.SKILLS, <Skills />, animation.slideInSlideOut],
+  [ROUTES.CONTACT, <Contact />, animation.slideInSlideOut],
+  [ROUTES.BJ, <ProjectBJ />, animation.slideInSlideOutLeft],
+  [ROUTES.SCHEDULER, <ProjectScheduler />, animation.slideInSlideOutLeft],
+  [ROUTES.PORTFOLIO, <ProjectPortfolio />, animation.slideInSlideOutLeft],
+  [ROUTES.ASSIGNMENT, <ProjectAssignment />, animation.slideInSlideOutLeft],
+  [ROUTES.VECTOR, <ProjectVector />, animation.slideInSlideOutLeft],
+  [ROUTES.E_COMMERCE, <ProjectECommerce />, animation.slideInSlideOutLeft],
 ];
