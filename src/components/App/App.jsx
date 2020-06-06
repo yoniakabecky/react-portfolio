@@ -1,34 +1,11 @@
 import React, { useEffect } from "react";
-import { TransitionGroup, CSSTransition } from "react-transition-group";
+import { AnimatePresence } from "framer-motion";
 import { Switch, Route, withRouter, useLocation } from "react-router-dom";
 
-import "./App.scss";
-
-import * as ROUTES from "../../constants/routes";
-import Home from "../Home/Home";
-import About from "../About/About";
-import Skills from "../Skills/Skills";
-import Contact from "../Contact/Contact";
-import ProjectVector from "../Skills/ProjectVector";
-import ProjectAssignment from "../Skills/ProjectAssignment";
-import ProjectBJ from "../Skills/ProjectBJ";
-import ProjectPortfolio from "../Skills/ProjectPortfolio";
-import ProjectScheduler from "../Skills/ProjectScheduler";
+import PageTransition from "../../animations/PageTransition";
 import Error404 from "../404/Error404";
-import ProjectECommerce from "../Skills/ProjectECommerce";
-
-const routes = [
-  { path: ROUTES.HOME, component: Home },
-  { path: ROUTES.ABOUT, component: About },
-  { path: ROUTES.SKILLS, component: Skills },
-  { path: ROUTES.CONTACT, component: Contact },
-  { path: ROUTES.BJ, component: ProjectBJ },
-  { path: ROUTES.SCHEDULER, component: ProjectScheduler },
-  { path: ROUTES.PORTFOLIO, component: ProjectPortfolio },
-  { path: ROUTES.ASSIGNMENT, component: ProjectAssignment },
-  { path: ROUTES.VECTOR, component: ProjectVector },
-  { path: ROUTES.E_COMMERCE, component: ProjectECommerce },
-];
+import "./App.scss";
+import pages from "./pages";
 
 function App() {
   const location = useLocation();
@@ -39,34 +16,18 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
-  const transitionClassName =
-    pathname === "/"
-      ? "fadeIn"
-      : pathname.startsWith("/project")
-      ? "slideInRight"
-      : "slideIn";
-
   return (
-    <Route
-      render={({ location, match }) => (
-        <TransitionGroup>
-          <CSSTransition
-            in={match != null}
-            key={location.key}
-            timeout={500}
-            classNames={transitionClassName}
-            unmountOnExit
-          >
-            <Switch location={location}>
-              {routes.map(({ path, component }) => (
-                <Route exact path={path} component={component} />
-              ))}
-              <Route component={Error404} />
-            </Switch>
-          </CSSTransition>
-        </TransitionGroup>
-      )}
-    />
+    <AnimatePresence exitBeforeEnter>
+      <Switch location={location} key={pathname}>
+        {pages.map(([path, component, animation], i) => (
+          <Route exact path={path} key={`component-${i}`}>
+            <PageTransition variants={animation}>{component}</PageTransition>
+          </Route>
+        ))}
+
+        <Route component={Error404} />
+      </Switch>
+    </AnimatePresence>
   );
 }
 
