@@ -1,8 +1,10 @@
 import React from "react";
 import cx from "classnames";
+import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
+import { homePageMenu } from "../../animations/animations";
 import * as ROUTES from "../../constants/routes";
 import "./Home.scss";
 
@@ -35,21 +37,23 @@ function Home() {
       </div>
 
       <ul className={cx("linkWrapper", { right: !isMobile })}>
-        <li>
+        <motion.li variants={homePageMenu} custom={1}>
           <Link to={ROUTES.ABOUT} className="links">
             Who I Am?
           </Link>
-        </li>
-        <li>
+        </motion.li>
+
+        <motion.li variants={homePageMenu} custom={2}>
           <Link to={ROUTES.SKILLS} className="links">
             What I Do?
           </Link>
-        </li>
-        <li>
+        </motion.li>
+
+        <motion.li variants={homePageMenu} custom={3}>
           <Link to={ROUTES.CONTACT} className="links">
             Wanna Chat?
           </Link>
-        </li>
+        </motion.li>
       </ul>
     </div>
   );

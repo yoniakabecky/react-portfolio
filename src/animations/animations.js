@@ -25,3 +25,31 @@ export const slideInSlideOutLeft = {
   animate: { opacity: 1, x: 0, transition: animateTransition },
   exit: { opacity: 0, x: 2000, transition: exitTransition },
 };
+
+export const homePageMenu = {
+  initial: {
+    x: 100,
+    opacity: 0,
+  },
+  animate: (index) => {
+    return {
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 0.1 * index,
+        type: "spring",
+        mass: 0.8,
+      },
+    };
+  },
+  exit: (index) => {
+    return {
+      x: 100,
+      opacity: 0,
+      transition: {
+        y: { stiffness: 1000 },
+        delay: 0.1 * index + 0.2,
+      },
+    };
+  },
+};
