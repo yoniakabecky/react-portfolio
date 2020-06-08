@@ -7,16 +7,15 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.0",
     "@fortawesome/free-regular-svg-icons": "^5.13.0",
     "@fortawesome/free-solid-svg-icons": "^5.13.0",
-    "@fortawesome/react-fontawesome": "^0.1.9",
+    "@fortawesome/react-fontawesome": "^0.1.10",
     "classnames": "^2.2.6",
-    "node-sass": "^4.13.1",
+    "framer-motion": "^1.11.0",
+    "node-sass": "^4.14.1",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-motion": "^0.5.2",
-    "react-responsive": "^8.0.3",
-    "react-router-dom": "^5.1.2",
-    "react-scripts": "3.4.1",
-    "react-transition-group": "^4.2.2"
+    "react-responsive": "^8.1.0",
+    "react-router-dom": "^5.2.0",
+    "react-scripts": "3.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -38,5 +37,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "prettier": "2.0.5"
   }
 }
