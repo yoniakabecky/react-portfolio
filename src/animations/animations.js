@@ -53,3 +53,27 @@ export const homePageMenu = {
     };
   },
 };
+
+export const homePageName = {
+  initial: {
+    y: 100,
+    opacity: 0,
+  },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.2,
+      type: "spring",
+      mass: 0.8,
+    },
+  },
+  exit: {
+    y: 100,
+    opacity: 0,
+    transition: {
+      y: { stiffness: 1000 },
+      delay: 0.5,
+    },
+  },
+};

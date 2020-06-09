@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCanadianMapleLeaf } from "@fortawesome/free-brands-svg-icons";
 import cx from "classnames";
 import { useMediaQuery } from "react-responsive";
+import BounceContents from "../../animations/BounceContents";
 import { ReactComponent as Football } from "../../resources/icons/football.svg";
 import ModalNav from "../Layout/ModalNav";
 
@@ -22,7 +23,11 @@ function About() {
           alignItemCenter: isMobile,
         })}
       >
-        <div className={cx({ left: !isMobile }, "introWrapper")}>
+        <BounceContents
+          className={cx({ left: !isMobile }, "introWrapper")}
+          // animate={{ y: 0, transition: { delay: 1, type: "spring" } }}
+          // initial={{ y: -20 }}
+        >
           <h5>
             <FontAwesomeIcon icon={faCanadianMapleLeaf} className="icons red" />
             Hi, I'm Yoni Aoki
@@ -33,8 +38,12 @@ function About() {
             Japan. I'm passionate about improving my knowledge and skills, and
             learning new and innovative methods.
           </p>
-        </div>
-        <div className={cx({ right: !isMobile }, "hobbyWrapper")}>
+        </BounceContents>
+        <BounceContents
+          className={cx({ right: !isMobile }, "hobbyWrapper")}
+          // animate={{ y: 0, transition: { delay: 1, type: "spring" } }}
+          // initial={{ y: -20 }}
+        >
           <p>
             Also I like these things.
             <br />
@@ -81,7 +90,7 @@ function About() {
               <div className="cupSaucer"></div>
             </div>
           </div>
-        </div>
+        </BounceContents>
       </div>
     </div>
   );
