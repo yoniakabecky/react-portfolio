@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDown } from "@fortawesome/free-solid-svg-icons";
 
+import BounceContents from "../../animations/BounceContents";
 import ModalNav from "../Layout/ModalNav";
 import mySkills from "./mySkills";
 import myWorks from "./myWorks";
@@ -55,7 +56,7 @@ function Skills() {
           </div>
         )}
 
-        <div id="mySkills">
+        <BounceContents id="mySkills">
           <h5>My Skills</h5>
 
           <div className="skills">
@@ -71,9 +72,9 @@ function Skills() {
               </span>
             ))}
           </div>
-        </div>
+        </BounceContents>
 
-        <div id="myWorks" className="mb-5">
+        <BounceContents id="myWorks" className="mb-5">
           <h5>
             My Works <span>(Click to See the Detail)</span>
           </h5>
@@ -105,7 +106,7 @@ function Skills() {
               </div>
             </a>
           </div>
-        </div>
+        </BounceContents>
       </div>
     </div>
   );

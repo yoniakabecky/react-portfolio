@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 import { Link } from "react-router-dom";
 
-import { homePageMenu } from "../../animations/animations";
+import { homePageMenu, homePageName } from "../../animations/animations";
 import * as ROUTES from "../../constants/routes";
 import "./Home.scss";
 
@@ -21,12 +21,13 @@ function Home() {
       })}
       style={{ height: "100vh" }}
     >
-      <div
+      <motion.div
         className={cx({
           left: !isMobile,
           nameWrapper: !isMobile,
           textAlignCenter: isMobile,
         })}
+        variants={homePageName}
       >
         <h1 id="myName" className="red font-accent">
           Yoni
@@ -34,7 +35,7 @@ function Home() {
         <h3 id="myPosition" className="font-accent">
           A Front End Developer
         </h3>
-      </div>
+      </motion.div>
 
       <ul className={cx("linkWrapper", { right: !isMobile })}>
         <motion.li variants={homePageMenu} custom={1}>

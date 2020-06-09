@@ -2,6 +2,7 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
 import { faLinkedinIn, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import BounceContents from "../../animations/BounceContents";
 import { greeting } from "../../functions/greeting";
 import ModalNav from "../Layout/ModalNav";
 import "./Contact.scss";
@@ -12,7 +13,7 @@ class Contact extends React.Component {
       <div className="bg-gray">
         <ModalNav isBgGray={true} />
 
-        <div className="container alignItemCenter justifyCenter textAlignCenter">
+        <BounceContents className="container alignItemCenter justifyCenter textAlignCenter">
           <h1 className="red">{greeting()}</h1>
 
           <h4 className="textAlignCenter">
@@ -44,7 +45,7 @@ class Contact extends React.Component {
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>
-        </div>
+        </BounceContents>
       </div>
     );
   }
