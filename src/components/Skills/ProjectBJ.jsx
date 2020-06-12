@@ -22,8 +22,8 @@ const ProjectBJ = () => {
       </div>
 
       <div className="projectContainer">
-        <h6>A simple basic card game</h6>
-        <h6>Skills: HTML5, SASS, JavaScript</h6>
+        <p>A simple basic card game</p>
+        <p>Skills: HTML5, SASS, JavaScript</p>
 
         <ul className="projectLinks">
           <p>Links</p>
