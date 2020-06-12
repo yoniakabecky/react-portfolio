@@ -1,11 +1,11 @@
-@import url('https://fonts.googleapis.com/css?family=Quantico|Share+Tech+Mono|Ravi+Prakash|Source+Code+Pro&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&family=Ravi+Prakash&display=swap");
 
 * {
   box-sizing: border-box;
-  font-family: 'Quantico', sans-serif;
+  font-family: "Quicksand", sans-serif;
   font-size: 62.5%;
-	margin: 0;
-  padding: 0; 
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -17,16 +17,12 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
-
 
 .font-accent {
-  font-family: 'Ravi Prakash', cursive;
-}
-
-.font-simple {
-  font-family: 'Share Tech Mono', monospace;
+  font-family: "Ravi Prakash", cursive;
 }
 
 h1 {

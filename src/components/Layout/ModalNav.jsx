@@ -21,7 +21,7 @@ function ModalNav({ location, isBgGray }) {
         {getPageName()}
       </h4>
 
-      <Link to={ROUTES.HOME} className="close-link font-simple">
+      <Link to={ROUTES.HOME} className="close-link">
         CLOSE
         <FontAwesomeIcon icon={faTimes} className="close-icon" />
       </Link>
